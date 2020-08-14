@@ -1,0 +1,5 @@
+.with-bg { background: #F5F5F5; padding: 15px 20px; }
+.job-block { border: 1px solid #C4C4C4; padding: 20px 15px; margin-bottom: 10px; }
+.job-block .img { width: 75px; height: 75px; background: #F5F5F5; margin-right: 15px; }
+.rmx-5 { margin-left: -5px; margin-right: -5px; }
+.rmx-5 .col-12 { padding-left: 5px; padding-right: 5px; }
