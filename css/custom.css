@@ -6,6 +6,9 @@
 .work-block { max-width: 670px; margin: 0 auto; }
 .function-block { max-width: 710px; margin: 0 auto; }
 .mw-550 { max-width: 550px; margin: 0 auto; }
+.user-img { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; }
+.font-20 { font-size: 20px; }
+.font-24 { font-size: 24px; }
 
 .form-check { margin-bottom: 15px; margin-right: 15px }
 .form-check input[type="checkbox"] { opacity: 0; position: fixed; width: 0; }
