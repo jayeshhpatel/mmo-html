@@ -9,6 +9,7 @@
 .user-img { width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; }
 .font-20 { font-size: 20px; }
 .font-24 { font-size: 24px; }
+.text-green { color: #32B6C4; }
 
 .form-check { margin-bottom: 15px; margin-right: 15px }
 .form-check input[type="checkbox"] { opacity: 0; position: fixed; width: 0; }
