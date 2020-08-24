@@ -181,6 +181,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .text-danger {
     color: $red !important;
 }
+.text-bodyfontcolor {
+    color: $bodyfontcolor !important;
+}
 
 .bg-light {background: #F5F5F5 !important;}
 
@@ -214,8 +217,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 
-.mb-15 {margin-bottom: 15px !important;}
-.mb-20 {margin-bottom: 20px !important;}
 
 .space-h20 {height: 20px;}
 .space-h30 {height: 30px;}
@@ -528,10 +529,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     input[type="checkbox"] { 
         opacity: 0; position: fixed; width: 0; 
         &:focus + label { border-color: $primary; }
-        &:checked + label { border-color: $primary; background: $primary; color: #ffffff; }  
+        &:checked + label { border-color: $primary; background: $primary; color: $white; }  
     }
 
-    label { border: 1px solid #C4C4C4; display: inline-block; background: #ffffff; border-radius: 50px; padding: 6px 20px; font-size: 13px; color: $bodyfontcolor; cursor: pointer; 
+    label { border: 1px solid #C4C4C4; display: inline-block; background: $white; border-radius: 50px; padding: 6px 20px; font-size: 13px; color: $bodyfontcolor; cursor: pointer; 
         &.bg-green { border: 1px solid $primary; background: rgba(50, 182, 196, 0.5); border-radius: 50px; font-weight: 600; }
 
         span { display: block; }
@@ -898,7 +899,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .nav-theme {
     .nav-link { border: 1px solid #C4C4C4; background: #F5F5F5; max-width: 100px; min-height: 100px; text-align: center; border-radius: 0; margin: 0 5px; text-decoration: none; color: #4E4E4E; padding: 20px 10px 5px 10px; font-size: 17px;  position: relative;
     
-        &.active, &.done { border: 1px solid #32B6C4; background: #32B6C4; color: #ffffff; font-weight: 600; 
+        &.active, &.done { border: 1px solid $primary; background: $primary; color: $white; font-weight: 600; 
             small { font-weight: 600;  }
         }
 
@@ -921,7 +922,59 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     
 }
 
+.search-input { margin-bottom: 20px; 
+    .input-group {
+        & > input { border-top-left-radius: 25px; border-bottom-left-radius: 25px; padding-left: 40px; font-size: 14px; min-height: 35px; }
+        & > .icon { position: absolute; left: 15px; width: 20px; top: 50%; transform: translateY(-50%); z-index: 4; margin-top: -1px; }
+        & > .input-group-append { margin-left: -15px; z-index: 4;
+            .btn { @include border-radius(50px); min-width: 85px; }
+        }
+    }
+}
 
+.icon-dropdown-select { position: relative; max-width: 150px; margin-left: 15px; width: 100%;
+    .custom-select-label { padding: 6px 12px 6px 30px; }
+    .icon { position: absolute; top: 50%; transform: translateY(-50%); left: 12px; }
+}
+
+.home-match-tab { margin-top: 10px;
+    .nav-link { padding: 5px 10px; min-height: auto; border:none; border-bottom: 1px solid $primary; max-width: 100%; background: $white; margin: 0; font-size: 16px; font-weight: 600; color: $primary; @include border-radius(0px); text-align: center;
+        &.active { background: $primary; color: $white; border: none; border-bottom: 1px solid $primary; }
+    }
+}
+.filter-job { padding: 20px 50px; 
+    .filter-box { border-bottom: 1px solid $MMO_lightgray; padding-bottom: 12px; margin-bottom: 12px; 
+        .filter-title { @include flexbox(); @include align-items(center); @include justify-content(space-between); font-size: 14px;
+            h4 { margin-bottom: 0; }
+        }
+        .arrow { font-size: 18px; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-start); color: $primary; cursor: pointer; transition: all 0.3s ease-in-out; 
+            &.open { transform: rotateX(180deg); }
+        }
+        .link { color: $bodyfontcolor; @include flexbox(); @include align-items(center); @include justify-content(space-between); text-decoration: none; margin-bottom: 3px;
+            &:hover { color: $black; }
+            span { display: inline-flex; margin-bottom: 0; }
+        }
+        .filter-body { margin-top: 10px; font-size: 14px;
+            span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 3px; }            
+        }
+        .edit-input { color: #32B6C4; font-size: 16px; @include flexbox(); @include align-items(center); @include justify-content(space-between); font-weight: bold; margin-bottom: 10px;
+            .icon { color: #4E4E4E; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-end); cursor: pointer; }
+        }
+    }
+    .filter-type-dropdown { max-width: 120px; }
+    .job-box { position: relative; border-bottom: 1px solid $MMO_lightgray; padding-bottom: 15px; margin-bottom: 10px; 
+        .job-details { display: flex; 
+            .img { min-width: 75px; min-height: 75px; background: $light; margin-right: 15px; }
+        }
+    }
+    .status-block { position: absolute; top: 5px; right: 30px; 
+        span { padding-left: 15px; 
+            &.wish-list { color: $primary; font-size: 18px; }
+            .btn { @include border-radius(5px); }
+        }
+    }
+    .last-day-block { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-top: 8px; font-size: 14px; }
+}
 
 @media (max-width: 767px){
     .m-font-10 {font-size: 10px !important;}
