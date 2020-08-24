@@ -2,7 +2,7 @@
 /* MAIN
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function() {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 
     $("[data-toggle=popover]").popover({
         html : true,
@@ -12,6 +12,20 @@ $(document).ready(function() {
             return $(content).children(".popover-body").html();
         }
     });
+
+    if ($('.sliding-navbar').length) {
+        $('.hamburger-menu').click(function(){
+            $('.sliding-navbar').toggleClass('sliding-navbar--open');
+            $('.mask').toggleClass('show')
+            $('.hamburger').toggleClass('menu-opened');
+        });
+
+        $('.mask').click(function(){
+            $('.sliding-navbar').toggleClass('sliding-navbar--open');
+            $('.mask').removeClass('show');
+            $('.hamburger').toggleClass('menu-opened');
+        })
+    }
 
 
     /* Login - Password */
@@ -93,9 +107,11 @@ $(document).ready(function() {
         e.preventDefault();
         $("[id=" + $(this).attr("data-related") + "]").addClass("active");
         $("._showhide").hide();
-        $("[id=" + $(this).attr("data-related") + "]").fadeIn(1200);
+        $("[id=" + $(this).attr("data-related") + "]").show();
         return false;
     });
+
+
 
     /* Slider - Card View */
     if ($('.card-slider').length) {
