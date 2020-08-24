@@ -967,7 +967,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .filter-type-dropdown { max-width: 120px; }
     .job-box { position: relative; border-bottom: 1px solid $MMO_lightgray; padding-bottom: 15px; margin-bottom: 10px; 
         .job-details { display: flex; 
-            .img { width: 75px; height: 75px; background: $light; margin-right: 15px; }
+            .img { min-width: 75px; max-width: 75px; height: 75px; background: $light; margin-right: 15px; }
         }
     }
     .status-block { position: absolute; top: 5px; right: 30px; 
