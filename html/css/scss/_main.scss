@@ -1070,6 +1070,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
     }
     .last-day-block { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-top: 8px; font-size: 14px; }
+    @media (max-width: 992px) {
+        padding: 15px 0;
+    }
 }
 
 .job-desc-header { min-height: 170px; background: #32B6C4; padding: 15px; margin-top: 12px;
