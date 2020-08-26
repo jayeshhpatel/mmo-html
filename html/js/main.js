@@ -19,11 +19,28 @@ $(document).ready(function() {
             $('.mask').toggleClass('show')
             $('.hamburger').toggleClass('menu-opened');
         });
-
-        $('.mask').click(function(){
-            $('.sliding-navbar').toggleClass('sliding-navbar--open');
+        $('.mask').click(function(){            
+            $('.sliding-navbar').removeClass('sliding-navbar--open');
             $('.mask').removeClass('show');
-            $('.hamburger').toggleClass('menu-opened');
+            $('.hamburger').removeClass('menu-opened');
+        })
+    }
+    if($('.notification-menu').length) {         
+        $('.notification-menu').click(function(){
+            $(this).toggleClass('active');
+            $('.notification-bar').toggleClass('notification-bar--open');
+            $('.mask').toggleClass('show')
+        });
+        $('.mask').click(function(){  
+            $(this).removeClass('active');          
+            $('.notification-bar').removeClass('notification-bar--open');
+            $('.mask').removeClass('show');
+        })
+    }
+    if($('.filter-box').length) { 
+        $('.filter-box .filter-title .arrow').on('click', function(){
+            $(this).toggleClass('open');
+            $(this).parents('.filter-box').find('.filter-body').slideToggle();
         })
     }
 
