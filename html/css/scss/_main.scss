@@ -630,20 +630,22 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 
-.sliding-navbar, .notification-bar {
+.sliding-navbar {
     position: fixed;
     top: 54px;
     right: -400px;
     height: calc(100vh - 54px);
     width: 280px;
-    background: #F5F5F5;
+    background: $white;
     border: 1px solid #C4C4C4;
     transition: right 0.3s ease-in-out;
     z-index: 300;
-    padding: 20px 0;
     overflow: hidden;
     overflow-y: auto;
-    .navbar--items { padding: 0; margin: 0; list-style-type: none;
+    ul { display: none; 
+        &.active { display: block; }
+    }
+    .navbar--items { height: 100%; background: #f5f5f5; padding: 20px 0; margin: 0; list-style-type: none;
         .navbar--item {
             .navbar--link { padding: 10px 20px; display: flex; align-content: center; color: #4E4E4E; font-size: 14px; text-decoration: none; @include transition (.3s, ease-in-out);
                 i { margin-right: 15px; filter: grayscale(1) brightness(0.7); @include transition (.3s, ease-in-out); 
@@ -663,11 +665,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
         }
     }
-    &.sliding-navbar--open, &.notification-bar--open{
-        right: 0px;
-    }
-}
-.notification-bar { padding: 0; background: #ffffff;
     .notification--items { padding: 0; margin: 0; list-style-type: none;
         .notification--item { padding: 15px 10px; border-bottom: 1px solid #C4C4C4; @include transition(0.3s, ease-in-out);
             .info { @include flexbox(); @include align-items(center); 
@@ -684,8 +681,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             &:hover { background: #F5F5F5; }
         }
     }
+    &.sliding-navbar--open{
+        right: 0px;
+    }
 }
-
 .mask{
     position:fixed;
     top: 0px;
@@ -731,6 +730,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                 small {
                     display: block; line-height: 1;
                 }
+            }
+            &.job-menu.alert-arrow { position: relative;
+                &::after { position: absolute; left: 50%; transform: translateX(-50%); bottom: -8px; width: 0; height: 0; content: ''; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid #32B6C4; }
             }
             &.active { 
                 .nav-link { color: #32B6C4; 
@@ -1025,7 +1027,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 
 .alert-primary { text-align: center; color: #ffffff; background: #32B6C4; border-color: #32B6C4; @include border-radius(0px); font-weight: bold; padding: 15px; position: relative;
     .close { color: #ffffff; opacity: 1; }
-    &::after { position: absolute; left: 41%; top: -5px; width: 0; height: 0; content: ''; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid #32B6C4; z-index: 1035; }
 }
 
 .icon-dropdown-select { position: relative; max-width: 150px; margin-left: 15px; width: 100%;
@@ -1105,6 +1106,52 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 .border-left { border-left: 1px solid #c4c4c4!important; }
+
+.job-slider-block { margin: 15px 0 20px; padding: 25px 15px;
+    .title { margin-bottom: 20px; margin-left: 15px; @include flexbox(); @include align-items(center);
+        i { margin-right: 10px; font-size: 20px; 
+            &.icon-info { background: url(../images/icons/info.svg) no-repeat center center; width: 15px; height: 15px; background-size: contain; display: inline-block; margin-left: 12px; margin-bottom: -3px; }
+            &.icon-square-check { background: url(../images/icons/square-check.svg) no-repeat center center; width: 24px; height: 24px; background-size: contain; display: inline-block; }
+        }
+        .icon-label { padding: 1px 5px; font-weight: bold; background: #FFFFFF; border: 1px solid #EC656A; @include border-radius(5px); font-size: 12px; color: #EC656A; display: inline-block; margin-right: 10px; }
+    }
+    .sub-title { display: block; margin: 5px 0 15px 15px; }
+    .job-info-box { background: #FFFFFF; border: 1px solid #C4C4C4; padding: 5px 10px; margin: 0 15px; font-size: 14px; 
+        .action { padding-bottom: 2px; @include flexbox(); @include align-items(center); @include justify-content(space-between); }
+        .info { @include flexbox(); @include align-items(center);
+            img { min-width: 75px; max-width: 75px; min-height: 55px; max-height: 55px; background: #F5F5F5; margin-right: 12px; }
+            .desc {
+                div { max-width: 250px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+            }
+        }
+        .location { padding-top: 5px; padding-top: 5px; display: block; }
+        &.view-all-link { background: transparent; @include flexbox(); @include align-items(center); min-height: 145px; border: none; }
+    }
+    &.bg-light { background: #F5F5F5; }
+    @media (max-width: 1200px) {
+        margin: 10px 0 15px;
+        padding: 20px 10px;
+        .job-info-box { margin: 0 8px; 
+            .info {  
+                .desc {
+                    div { max-width: 180px; }
+                }
+            }
+        }
+    }
+}
+.live-application-block { background: #F5F5F5; padding: 50px 0;
+    .container-fluid { padding: 0 80px; }
+    .live-app-box { background: #FFFFFF; border: 1px solid #C4C4C4; padding: 15px; margin: 15px 0;
+        .app-img-name { @include flexbox(); @include align-items(center);
+            .img { background: #FFFFFF; border: 1px solid #C4C4C4; max-width: 60px; min-width: 60px; min-height: 60px; max-height: 60px; @include flexbox(); @include align-items(center); margin-right: 10px; }
+        }
+        .applied-date { @include flexbox(); margin-top: 10px;
+            .icon-calender { background: url(../images/icons/calender.svg) no-repeat center center; width: 15px; height: 15px; background-size: contain; display: inline-block; margin-right: 5px; margin-top: 3px; }
+        }
+        .status { padding-top: 5px; }
+    }
+}
 
 @media (max-width: 767px){
     .m-font-10 {font-size: 10px !important;}

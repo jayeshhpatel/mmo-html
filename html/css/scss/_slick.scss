@@ -8,19 +8,19 @@
 .slick-next {
     position: absolute;
     z-index: 2;
-    height: 58px;
-    width: 58px;
+    height: 40px;
+    width: 40px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: #000;
-    color: transparent;
+    background: $white;
+    color: #32B6C4;
+    border: 1px solid #32B6C4;
     top: 50%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
     padding: 0;
-    border: none;
     outline: none;
     @include border-radius(50%);
     @include flexbox();
@@ -31,22 +31,22 @@
 
     &:hover {
         outline: none;
-        background: #000;
-        color: transparent;
+        background: #32B6C4;
+        color: $white;
         &:before {
             opacity: 1;
         }
     }
     &:focus {
         outline: none;
-        background: #000;
-        color: transparent;
+        background: #32B6C4;
+        color: $white;
         &:before {
             opacity: 1;
         }
     }
     &.slick-disabled:before {
-        opacity: 0.25;
+        opacity: 0.5;
     }
     &:before {
         content: '';
@@ -58,69 +58,58 @@
 }
 
 .slick-prev {
-    left: -78px;
+    left: -7px;
     [dir="rtl"] & {
         left: auto;
-        right: -78px;
+        right: 0px;
     }
-    &:before {
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="20" viewBox="0 0 11 20"><path d="M15.21,1.71A1,1,0,1,0,13.79.29l-9,9a1,1,0,0,0,0,1.42l9,9a1,1,0,0,0,1.42-1.42L6.91,10Z" transform="translate(-4.5)" fill="white"/></svg>') 50% 50% no-repeat;
+    &:before { margin-left: -2px;
+        background: url('data:image/svg+xml;utf8,<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 3.25L4.25 9.5L10.5 15.75L9.25 18.25L0.5 9.5L9.25 0.75L10.5 3.25Z" fill="rgb(50 182 196)"/></svg>') center center no-repeat; background-size: contain;
         [dir="rtl"] & {
             content: '';
         }
     }
-    // &:hover {
-    //     &:before {
-    //         margin-right: 30%;
-    //     }
-    // }
-    // &:focus {
-    //     &:before {
-    //         margin-right: 0%;
-    //     }
-    // }
+    &:hover, &:focus {
+        &:before { background: url('data:image/svg+xml;utf8,<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 3.25L4.25 9.5L10.5 15.75L9.25 18.25L0.5 9.5L9.25 0.75L10.5 3.25Z" fill="rgb(255 255 255)"/></svg>') center center no-repeat; background-size: contain; }
+    }
     // @media (max-width: 1500px) {
     //     left: -30px;
     // }
     @media (max-width: 1400px) {
-        left: -68px;
+        left: -7px;
     }
     @media (max-width: 1200px) {
-        left: -15px;
+        left: -7px;
     }
 }
 
 .slick-next {
-    right: -78px;
+    right: -7px;
     [dir="rtl"] & {
-        left: -78px;
+        left: 0px;
         right: auto;
     }
-    &:before {
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="20" viewBox="0 0 11 20"><path d="M13.09,10l-8.3,8.29a1,1,0,0,0,1.42,1.42l9-9a1,1,0,0,0,0-1.42l-9-9A1,1,0,0,0,4.79,1.71Z" transform="translate(-4.5 0)" fill="white"/></svg>') 80% 50% no-repeat;
+    &:before { margin-right: -2px;
+        background: url('data:image/svg+xml;utf8,<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 15.75L6.75 9.5L0.5 3.25L1.75 0.75L10.5 9.5L1.75 18.25L0.5 15.75Z" fill="rgb(50 182 196)"/></svg>') center center no-repeat; background-size: contain;
         [dir="rtl"] & {
             content: '';
         }
     }
 
-    // &:hover {
-    //     &:before {
-    //         margin-left: 30%;
-    //     }
-    // }
-    // &:focus {
-    //     &:before {
-    //         margin-left: 0%;
-    //     }
-    // }
+    &:hover, 
+    &:focus {
+        &:before {
+            background: url('data:image/svg+xml;utf8,<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 15.75L6.75 9.5L0.5 3.25L1.75 0.75L10.5 9.5L1.75 18.25L0.5 15.75Z" fill="rgb(255 255 255)"/></svg>') center center no-repeat; background-size: contain;
+        }
+    }
     // @media (max-width: 1500px) {
     //     right: -30px;
     // }
     @media (max-width: 1400px) {
-        right: -68px;
+        right: -7px;
     }
     @media (max-width: 1200px) {
-        right: -15px;
+        right: -7px;
     }
 }
 
