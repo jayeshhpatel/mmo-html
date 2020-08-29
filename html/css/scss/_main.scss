@@ -1026,8 +1026,8 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 
-.alert-primary { text-align: center; color: #ffffff; background: #32B6C4; border-color: #32B6C4; @include border-radius(0px); font-weight: bold; padding: 15px; position: relative;
-    .close { color: #ffffff; opacity: 1; }
+.alert-primary { text-align: center; color: #ffffff; background: #32B6C4; border-color: #32B6C4; @include border-radius(0px); font-weight: bold; padding: 15px; position: relative; padding-right: 50px;
+    .close { color: #ffffff; opacity: 1; top: 50%; transform: translateY(-50%); }
 }
 
 .icon-dropdown-select { position: relative; max-width: 150px; margin-left: 15px; width: 100%;
@@ -1054,7 +1054,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             span { display: inline-flex; margin-bottom: 0; }
         }
         .filter-body { margin-top: 10px; font-size: 14px;
-            span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 5px; line-height: 1.3; }   
+            span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 8px; line-height: 1.3; }   
             .progress { height: 8px; border-radius: 0px; background: #C4C4C4; }         
         }
         .edit-input { color: #32B6C4; font-size: 15px; @include flexbox(); @include align-items(start); @include justify-content(space-between); font-weight: bold; margin-bottom: 10px;
@@ -1164,4 +1164,22 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .m-font-20 {font-size: 20px !important;}
     .m-font-22 {font-size: 22px !important;}
     .m-font-24 {font-size: 24px !important;}
+    .main-header { 
+        .navbar { height: 54px; }
+        .navbar-nav  { flex-direction: row !important; }
+        .navbar-main { position: fixed; bottom: 0; width: 100%; left: 0; right: 0; background: $white; padding: 8px 15px; }        
+    }
+    .sliding-navbar { height: calc(100vh - 105px); }
+    .alert-primary { text-align: left; }
+    .live-application-block { padding: 40px 0 100px;
+        .container-fluid { padding: 0 15px; }
+    }
+}
+@media (max-width: 575px) {
+    .main-header {
+        .navbar-main { 
+            .nav-item { padding: 0 20px; }
+        }        
+    }
+    .sliding-navbar { width: 100%; }
 }
