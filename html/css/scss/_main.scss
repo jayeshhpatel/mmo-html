@@ -1046,7 +1046,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .filter-title { @include flexbox(); @include align-items(center); @include justify-content(space-between); font-size: 14px;
             h4 { margin-bottom: 0px; }
         }
-        .arrow { font-size: 18px; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-start); color: $primary; cursor: pointer; transition: all 0.3s ease-in-out; 
+        .arrow { font-size: 18px; min-width: 20px; min-height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-start); color: $primary; cursor: pointer; transition: all 0.3s ease-in-out; margin-left: 5px;
             &.open { transform: rotateX(180deg); }
         }
         .link { color: $bodyfontcolor; @include flexbox(); @include align-items(center); @include justify-content(space-between); text-decoration: none; margin-bottom: 3px;
@@ -1059,7 +1059,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
         .edit-input { color: #32B6C4; font-size: 15px; @include flexbox(); @include align-items(start); @include justify-content(space-between); font-weight: bold; margin-bottom: 10px;
             span.desc { max-width: 210px; color: #4E4E4E; font-weight: 400; }
-            .icon { color: #4E4E4E; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-end); cursor: pointer; margin-top: 5px; margin-left: 10px; }
+            .icon { color: #4E4E4E; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-end); cursor: pointer; margin-top: 3px; margin-left: 10px; }
         }
     }
     .filter-type-dropdown { max-width: 120px; }
