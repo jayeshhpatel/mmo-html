@@ -588,7 +588,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .hamburger {
         position: relative;
         transform: translateY(10px);
-        background: white;
+        background: rgba(78, 78, 78, 0.5);
         transition: all 0ms 300ms;
         width: 30px;
         height: 2px;
@@ -603,7 +603,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             position: absolute;
             left: 0;
             bottom: 8px;
-            background: white;
+            background: rgba(78, 78, 78, 0.5);
             transition: bottom 0.3s ease-in-out;
         }
         &:after {
@@ -611,7 +611,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             position: absolute;
             left: 0;
             top: 8px;
-            background: white;
+            background: rgba(78, 78, 78, 0.5);
             transition: top 0.3s ease-in-out;
         }
 
@@ -708,6 +708,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .main-header {
+    .navbar { background: $white; }
     .navbar-brand {
         padding-top: 3px;
         padding-bottom: 3px;
@@ -719,9 +720,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         margin: 0 auto;
 
         .nav-item { padding: 0 50px;
-            .nav-link { text-align: center; padding: 0px; color: $white; 
+            .nav-link { text-align: center; padding: 0px; color: #4e4e4e; 
                 small { font-weight: bold; }
-                i { filter: brightness(0) invert(1);
+                i { filter: brightness(0) invert(0);
                     &.icon-home { width: 21px; height: 21px; display: inline-block; background: url('../images/icons/home.svg') 50% 50% no-repeat; background-size: contain; }
                     &.icon-job { width: 21px; height: 21px; display: inline-block; background: url('../images/icons/job.svg') 50% 50% no-repeat; background-size: contain; }
                     &.icon-mail { width: 21px; height: 21px; display: inline-block; background: url('../images/icons/mail-green.svg') 50% 50% no-repeat; background-size: contain; }
@@ -783,7 +784,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         display: inline-block;
         background: url('../images/icons/bell.svg') center center no-repeat;
         background-size: contain;
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
     }
 }
 
@@ -1043,7 +1044,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .filter-box { border-bottom: 1px solid $MMO_lightgray; padding-bottom: 12px; margin-bottom: 12px; 
         .icon-pencil { width: 16px; height: 16px; display: inline-block; background: url('../images/icons/pencil.svg') center center no-repeat; background-size: contain; }
         .filter-title { @include flexbox(); @include align-items(center); @include justify-content(space-between); font-size: 14px;
-            h4 { margin-bottom: 0; }
+            h4 { margin-bottom: 0px; }
         }
         .arrow { font-size: 18px; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-start); color: $primary; cursor: pointer; transition: all 0.3s ease-in-out; 
             &.open { transform: rotateX(180deg); }
@@ -1053,7 +1054,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             span { display: inline-flex; margin-bottom: 0; }
         }
         .filter-body { margin-top: 10px; font-size: 14px;
-            span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 3px; }   
+            span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 5px; line-height: 1.3; }   
             .progress { height: 8px; border-radius: 0px; background: #C4C4C4; }         
         }
         .edit-input { color: #32B6C4; font-size: 16px; @include flexbox(); @include align-items(start); @include justify-content(space-between); font-weight: bold; margin-bottom: 10px;
@@ -1064,7 +1065,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .filter-type-dropdown { max-width: 120px; }
     .job-box { position: relative; border-bottom: 1px solid $MMO_lightgray; padding-bottom: 15px; margin-bottom: 10px; 
         .job-details { display: flex; 
-            .img { min-width: 75px; max-width: 75px; height: 75px; background: $light; margin-right: 15px; }
+            .img { min-width: 75px; width: 75px; height: 75px; min-height: 75px; background: $light; margin-right: 15px; @include flexbox();  @include align-items(center); }
+            .job-title { display: inline-block; padding-bottom: 3px; }
+            .job-desc { font-size: 14px; font-weight: bold; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 5px; }
+            .job-location { font-size: 13px; }
         }
     }
     .status-block { position: absolute; top: 5px; right: 30px; 
@@ -1107,7 +1111,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 .border-left { border-left: 1px solid #c4c4c4!important; }
 
-.job-slider-block { margin: 15px 0 20px; padding: 25px 15px;
+.job-slider-block { margin: 15px 0 20px; padding: 20px;
     .title { margin-bottom: 20px; margin-left: 15px; @include flexbox(); @include align-items(center);
         i { margin-right: 10px; font-size: 20px; 
             &.icon-info { background: url(../images/icons/info.svg) no-repeat center center; width: 15px; height: 15px; background-size: contain; display: inline-block; margin-left: 12px; margin-bottom: -3px; }
@@ -1118,26 +1122,21 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .sub-title { display: block; margin: 5px 0 15px 15px; }
     .job-info-box { background: #FFFFFF; border: 1px solid #C4C4C4; padding: 5px 10px; margin: 0 15px; font-size: 14px; 
         .action { padding-bottom: 2px; @include flexbox(); @include align-items(center); @include justify-content(space-between); }
-        .info { @include flexbox(); @include align-items(center);
-            img { min-width: 75px; max-width: 75px; min-height: 55px; max-height: 55px; background: #F5F5F5; margin-right: 12px; }
-            .desc {
-                div { max-width: 250px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+        .box-info { 
+            .box-img { min-width: 75px; width: 75px; min-height: 55px; height: 55px; background: #F5F5F5; margin-right: 12px; margin-top: 5px; @include flexbox(); @include align-items(center); float: left; }
+            .box-desc {
+                .box-title { strong { display: block; } }
+                .box-caption { font-size: 13px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
             }
         }
-        .location { padding-top: 5px; padding-top: 5px; display: block; }
+        .location { padding-top: 8px; display: inline-block; font-size: 13px; }
         &.view-all-link { background: transparent; @include flexbox(); @include align-items(center); min-height: 145px; border: none; }
     }
     &.bg-light { background: #F5F5F5; }
     @media (max-width: 1200px) {
         margin: 10px 0 15px;
-        padding: 20px 10px;
-        .job-info-box { margin: 0 8px; 
-            .info {  
-                .desc {
-                    div { max-width: 180px; }
-                }
-            }
-        }
+        padding: 15px;
+        .job-info-box { margin: 0 8px; }
     }
 }
 .live-application-block { background: #F5F5F5; padding: 50px 0;
