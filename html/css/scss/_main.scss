@@ -1092,14 +1092,20 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     nav { position: relative; height: 100%; 
         .title { padding: 12px 20px; @include flexbox(); @include align-items(center); @include justify-content(space-between); border-bottom: 1px solid #C4C4C4;
             .name { font-weight: bold; font-size: 16px; }
-            .mobile-filter--close { cursor: pointer; font-size: 16px; } 
+            .mobile-filter--close { cursor: pointer; font-size: 16px; @include transition(0.3s, ease-in-out); } 
+            &:hover { background: $light;
+                .mobile-filter--close { opacity: 0.7; }
+            }
         }
         .back { 
             a { border-bottom: none; }
             .name { font-weight: bold; font-size: 16px; @include flexbox(); @include align-items(center); color: #4E4E4E;
                 .icon-back { width: 19px; height: 16px; display: inline-block; background: url('../images/icons/back-arrow-black.svg') center center no-repeat; background-size: contain; margin-right: 10px; }
             }
-            .icon-close { cursor: pointer; font-size: 16px; color: #4E4E4E; } 
+            .icon-close { cursor: pointer; font-size: 16px; color: #4E4E4E; @include transition(0.3s, ease-in-out); } 
+            &:hover { a { background: $light; }
+                .icon-close { opacity: 0.7; }
+            }
         }
         .footer { padding: 25px 20px;
             .form-action { @include flexbox(); @include align-items(center); @include justify-content(center); }
@@ -1133,10 +1139,13 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             &.hidden > li > a { opacity: 0; display: none; }
         }
     }
-    a { text-decoration: none; padding: 12px 20px; @include flexbox(); @include align-items(center); @include justify-content(space-between); border-bottom: 1px solid #C4C4C4; position: relative;
+    a { text-decoration: none; padding: 12px 20px; @include flexbox(); @include align-items(center); @include justify-content(space-between); border-bottom: 1px solid #C4C4C4; position: relative; @include transition(0.3s, ease-in-out);
         .filter-name { color: #4E4E4E; }
         .detail { color: #4E4E4E; max-width: 120px; position: absolute; top: 50%; transform: translateY(-50%); right: 35px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .arrow { font-size: 24px; line-height: 1; color: #32B6C4; }
+        .arrow { font-size: 24px; line-height: 1; color: #32B6C4; @include transition(0.3s, ease-in-out); }
+        &:hover, &:focus { background: #eee;
+            .arrow { transform: translateX(5px); }
+        }
     }
     &.mobile-filter-nav--open { left: 0; }
 }
