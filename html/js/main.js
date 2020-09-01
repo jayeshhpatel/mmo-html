@@ -75,7 +75,31 @@ $(document).ready(function() {
         $('.mobile-filter--close').click(function(){ 
             $('.mobile-filter-nav').removeClass('mobile-filter-nav--open');
             $('body').removeClass('overflow-hidden');
-        })        
+        }) 
+
+        $(".mobile-filter-nav nav li a").on('click', function(){		
+            var parentLevel = $(this).parents('ul').length -1;
+            var currentMenu = $(this).closest('ul');
+            var currentListItem = $(this).parent('li');
+            var parentMenu = $('.level-' + parentLevel);
+            var subMenu = $(this).next('ul');
+
+            if(currentListItem.hasClass('back')) {
+                // back button hit	
+                currentMenu.removeClass('active');
+                parentMenu.removeClass('hidden');
+            } else if (currentListItem.children('ul').length > 0) {
+                // menu item has children - expand the menu
+                subMenu.toggleClass('active');
+                currentMenu.addClass('hidden');
+            }
+        });
+
+        $(".btn.back").on('click', function(){ 
+            var parentLevel = $(this).parents('ul').length -1;
+            $(this).closest('ul').removeClass('active');
+            $('.level-' + parentLevel).removeClass('hidden');
+        });
     }
     
     /* Login - Password */

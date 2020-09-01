@@ -1110,23 +1110,26 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .footer { padding: 25px 20px;
             .form-action { @include flexbox(); @include align-items(center); @include justify-content(center); }
         }   
-        .menu-body { text-align: center; padding: 30px 0;
-            .content-center { height: calc(100vh - 48px); display: flex; flex-direction: column; align-items: center; justify-content: center; }             
-            .form-group { text-align: left; max-width: 280px; margin: 20px auto 20px;
-                .form-control { border-radius: 32px; }
+        .menu-body { text-align: center; padding: 10px 15px 10px;
+            .content-center { height: calc(100vh - 48px); display: flex; flex-direction: column; align-items: center; justify-content: center; } 
+            .menu-title { color: #4e4e4e; margin-bottom: 15px; }  
+            .form-content { max-width: 300px; margin: 0 auto; 
+                &.content-md { max-width: 400px; }
+            }          
+            .form-group { text-align: left; margin-bottom: 15px;
                 .label-title { font-size: 14px; margin-bottom: 5px; }
                 .custom-dropdown-select {
                     .dropdown-menu { height: auto; }
-                    .custom-select-label { border-radius: 32px; }
                 }
-                .icon-dropdown-select { margin: 0; max-width: 100%; }
+                .icon-dropdown-select { margin: 0; max-width: 100%; }                
             }
-            .form-row-grid-max-min { max-width: 320px; text-align: left; margin: 20px auto 20pxs;
+            .custom-control { margin-bottom: 5px; }
+            .form-row-grid-max-min { text-align: left; 
                 .grid-max-min { display: grid; grid-gap: 10px; grid-template-columns:70px 1fr; 
                     .form-group { margin: 0 !important; }
                 }
             }
-            .form-action { @include flexbox(); @include align-items(center); @include justify-content(center); padding: 30px 20px; }
+            .form-action { @include flexbox(); @include align-items(center); @include justify-content(center); padding-top: 20px; }
         }
         ul { position: absolute; top: 0px; padding: 0; margin: 0; list-style-type: none; width: 100%; z-index: 1; @include transition(0.3s, ease-in-out); height: 100%; background: #F5F5F5; overflow: hidden; overflow-y: auto;
             li:last-child {
@@ -1141,7 +1144,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
     a { text-decoration: none; padding: 12px 20px; @include flexbox(); @include align-items(center); @include justify-content(space-between); border-bottom: 1px solid #C4C4C4; position: relative; @include transition(0.3s, ease-in-out);
         .filter-name { color: #4E4E4E; }
-        .detail { color: #4E4E4E; max-width: 120px; position: absolute; top: 50%; transform: translateY(-50%); right: 35px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .detail { color: #4E4E4E; max-width: 160px; position: absolute; top: 50%; transform: translateY(-50%); right: 35px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .arrow { font-size: 24px; line-height: 1; color: #32B6C4; @include transition(0.3s, ease-in-out); }
         &:hover, &:focus { background: #eee;
             .arrow { transform: translateX(5px); }
