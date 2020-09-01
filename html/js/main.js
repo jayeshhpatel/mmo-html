@@ -66,6 +66,17 @@ $(document).ready(function() {
             $('.notification-menu').removeClass('active');
         })        
     }
+
+    if ($('.mobile-filter-nav').length) {
+        $('.filter-menu').click(function(){ 
+            $('.mobile-filter-nav').addClass('mobile-filter-nav--open');
+            $('body').addClass('overflow-hidden');
+        })        
+        $('.mobile-filter--close').click(function(){ 
+            $('.mobile-filter-nav').removeClass('mobile-filter-nav--open');
+            $('body').removeClass('overflow-hidden');
+        })        
+    }
     
     /* Login - Password */
     if ($('.toggle-password').length) {
