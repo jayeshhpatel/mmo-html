@@ -67,6 +67,7 @@ $(document).ready(function() {
         })        
     }
 
+    /* Filter Navbar in Mobile */
     if ($('.mobile-filter-nav').length) {
         $('.filter-menu').click(function(){ 
             $('.mobile-filter-nav').addClass('mobile-filter-nav--open');
@@ -100,6 +101,58 @@ $(document).ready(function() {
             $(this).closest('ul').removeClass('active');
             $('.level-' + parentLevel).removeClass('hidden');
         });
+    }
+
+    /* Similer Job Sider in */
+    if($('.job-description-block').length){
+        $('.view-more-link').on('click', function(){
+            $(this).hide();
+            $('.view-more-block').slideDown();
+            $('.apply-through-block').addClass('active');
+            $('.match-details-block').show();
+        })
+        // slider
+        $slick_slider = $('.similar-job-slider');
+        settings_slider = {
+            dots: true,
+            arrows: false,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                },
+        ]
+            // more settings
+        }
+        slick_on_mobile( $slick_slider, settings_slider);
+
+        // slick on mobile
+        function slick_on_mobile(slider, settings){
+            $(window).on('load resize', function() {
+            if ($(window).width() > 767) {
+                if (slider.hasClass('slick-initialized')) {
+                slider.slick('unslick');
+                }
+                return
+            }
+            if (!slider.hasClass('slick-initialized')) {
+                return slider.slick(settings);
+            }
+            });
+        };
     }
     
     /* Login - Password */
