@@ -1282,6 +1282,20 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .container-fluid { padding: 0 15px; }
     }
     .job-description-block {
+        .job-desc-header { 
+            .icon-back { width: 15px; height: 10px;  }
+            .icon-share { width: 15px; height: 10px; }
+            .job-action { 
+                a { font-size: 12px;
+                    i { margin-right: 5px; }
+                }
+            }
+            .job-name { margin-top: 10px; 
+                h1 { font-size: 16px; }
+                .views { font-size: 12px; }
+            }
+        }
+        .filter-list-block ul li, .job-information h3 { font-size: 13px; }
         .similar-job-sidebar { margin-top: 10px;
             .similar-job-box { padding: 5px 15px; border-left: 1px solid #C4C4C4; border-bottom: none;
                 .box-info { 
