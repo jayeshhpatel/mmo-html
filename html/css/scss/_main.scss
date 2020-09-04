@@ -1321,15 +1321,33 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 .live-application-block { background: #F5F5F5; padding: 50px 0;
-    .container-fluid { padding: 0 80px; }
-    .live-app-box { background: #FFFFFF; border: 1px solid #C4C4C4; padding: 15px; margin: 15px 0;
-        .app-img-name { @include flexbox(); @include align-items(center);
-            .img { background: #FFFFFF; border: 1px solid #C4C4C4; max-width: 60px; min-width: 60px; min-height: 60px; max-height: 60px; @include flexbox(); @include align-items(center); margin-right: 10px; }
+    .container-fluid { padding: 0 80px; }    
+}
+.live-app-box { position: relative; background: #FFFFFF; border: 1px solid #C4C4C4; padding: 15px; margin-bottom: 15px;
+    .app-img-name { @include flexbox(); @include align-items(center);
+        .img { background: #FFFFFF; border: 1px solid #C4C4C4; max-width: 60px; min-width: 60px; min-height: 60px; max-height: 60px; @include flexbox(); @include align-items(center); margin-right: 10px; }
+        .title { font-weight: 700; }
+    }
+    .applied-date { @include flexbox(); margin-top: 10px;
+        .icon-calender { background: url(../images/icons/calender.svg) no-repeat center center; width: 15px; height: 15px; background-size: contain; display: inline-block; margin-right: 5px; margin-top: 3px; }
+        span { font-weight: 700; font-size: 12px; 
+            a { font-size: 14px; }
         }
-        .applied-date { @include flexbox(); margin-top: 10px;
-            .icon-calender { background: url(../images/icons/calender.svg) no-repeat center center; width: 15px; height: 15px; background-size: contain; display: inline-block; margin-right: 5px; margin-top: 3px; }
+    }
+    .status { padding-top: 5px; font-size: 14px; }
+    .interview-invite { font-weight: bold; font-size: 14px; background: #FFFFFF; border: 1px solid #EC656A; border-radius: 5px; padding: 5px 10px; position: absolute; bottom: 0; right: 0; }
+}
+
+.app-tab { justify-content: center; margin-bottom: 50px;
+    .nav-item { max-width: 250px; 
+        .nav-link { border-color: #EC656A; color: #EC656A;
+            &.active { background: #EC656A; color: $white;  }
         }
-        .status { padding-top: 5px; }
+    }
+}
+.application-block {
+    .title-box { background: #32B6C4; padding: 8px 15px; color: $white; font-weight: bold; font-size: 14px; margin-bottom: 20px; text-align: center; 
+        &.bg-red { background: #EC656A; }
     }
 }
 
@@ -1432,4 +1450,5 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .job-description-block {
         .automatic-application-check { padding: 15px; }
     }
+    .home-match-tab .nav-link { font-size: 14px; }
 }
