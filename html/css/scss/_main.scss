@@ -1189,6 +1189,13 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
         }
     }
+    .thanks-info { @include flexbox(); @include align-items(center); margin-bottom: 20px; margin-top: 30px;
+        h4 { color: #32B6C4; font-weight: 700; margin-bottom: 10px; }
+        p { margin-bottom: 0; }
+        .img { min-width: 80px; min-height: 80px; width: 80px; height: 80px; @include border-radius(50%); border: 1px solid #32B6C4; margin-right: 10px;
+            img { @include border-radius(50%); width: 100%; }
+        }
+    }
     .form-action { margin: 30px 0; text-align: center; 
         &.btn-mw-175 { .btn { min-width: 175px; margin-top: 10px; } }
     }
@@ -1231,21 +1238,15 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         h4 { color: #4e4e4e; font-weight: 700; }
         .select-row { margin-right: -8px; margin-left: -8px; 
             .col-12 { padding-left: 8px; padding-right: 8px; }
-        }
-        .thanks-info { @include flexbox(); @include align-items(center); margin-bottom: 20px; margin-top: 30px;
-            h4 { color: #32B6C4; font-weight: 700; margin-bottom: 20px; }
-            .img { min-width: 80px; min-height: 80px; width: 80px; height: 80px; @include border-radius(50%); border: 1px solid #32B6C4; margin-right: 10px;
-                img { @include border-radius(50%); width: 100%; }
-            }
-        }
+        }        
         .essential-requirements { margin: 15px 0; 
             .custom-control { margin-left: 15px; }
         }
         .experience-motivations { padding: 15px 0;
-            a { font-weight: 700; }
+            .link { font-weight: 700; text-decoration: underline; }
             textarea { margin-top: 15px; padding-top: 25px; }
             .msg-text { position: relative;
-                a { position: absolute; top: 5px; right: 2px; background: #ffffff; padding: 0 15px; }
+                .save { position: absolute; top: 5px; right: 2px; background: #ffffff; padding: 0 15px; text-decoration: underline; font-weight: 700; }
             }
         }
         .cv-upload { margin-top: 15px; }
@@ -1253,6 +1254,13 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .link { font-weight: 700; margin-bottom: 20px; display: inline-block; }
         }
     }
+    .email-description-block { border-top: 1px solid #C4C4C4; padding-top: 20px;
+        .link { font-weight: 700; text-decoration: underline; }
+    }
+}
+
+.admin-email-block {  
+    
 }
 .border-left { border-left: 1px solid #c4c4c4!important; }
 
