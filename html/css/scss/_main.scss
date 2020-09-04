@@ -285,6 +285,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         // padding-left: .75rem;
         font-size: 12px;
         font-weight: 600;
+        margin-bottom: 5px;
     }
     .form-control {
         font-size: 14px;
@@ -396,6 +397,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
+        span { max-width: calc(100% - 15px); overflow: hidden; display: inline-block; text-overflow: ellipsis; }
         &::-ms-expand { display: none };
 
         &::after{
@@ -1225,6 +1227,32 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .view-more-link { display: inline-flex; @include align-items(center); font-weight: bold; text-decoration: none; margin-bottom: 15px;
         i { margin-left: 10px; font-size: 16px; }
     }
+    .appliction-block { padding-top: 15px; 
+        h4 { color: #4e4e4e; font-weight: 700; }
+        .select-row { margin-right: -8px; margin-left: -8px; 
+            .col-12 { padding-left: 8px; padding-right: 8px; }
+        }
+        .thanks-info { @include flexbox(); @include align-items(center); margin-bottom: 20px; margin-top: 30px;
+            h4 { color: #32B6C4; font-weight: 700; margin-bottom: 20px; }
+            .img { min-width: 80px; min-height: 80px; width: 80px; height: 80px; @include border-radius(50%); border: 1px solid #32B6C4; margin-right: 10px;
+                img { @include border-radius(50%); width: 100%; }
+            }
+        }
+        .essential-requirements { margin: 15px 0; 
+            .custom-control { margin-left: 15px; }
+        }
+        .experience-motivations { padding: 15px 0;
+            a { font-weight: 700; }
+            textarea { margin-top: 15px; padding-top: 25px; }
+            .msg-text { position: relative;
+                a { position: absolute; top: 5px; right: 2px; background: #ffffff; padding: 0 15px; }
+            }
+        }
+        .cv-upload { margin-top: 15px; }
+        .action { padding-bottom: 30px; padding-top: 20px; 
+            .link { font-weight: 700; margin-bottom: 20px; display: inline-block; }
+        }
+    }
 }
 .border-left { border-left: 1px solid #c4c4c4!important; }
 
@@ -1329,7 +1357,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
             .action { font-weight: 700; margin: 25px 0 30px; }
         }
-        .view-more-block, .apply-through-block, .match-details-block { display: none; }
+        .view-more-block, .apply-through-block, .match-details-block, .appliction-block { display: none; }
         .apply-through-block.active { display: flex; }
     }
 }

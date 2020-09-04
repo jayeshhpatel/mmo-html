@@ -110,6 +110,7 @@ $(document).ready(function() {
             $('.view-more-block').slideDown();
             $('.apply-through-block').addClass('active');
             $('.match-details-block').show();
+            $('.appliction-block').show();
         })
         // slider
         $slick_slider = $('.similar-job-slider');
