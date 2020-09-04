@@ -104,6 +104,33 @@ $(document).ready(function() {
     }
 
     /* Similer Job Sider in */
+    if($('.similar-slider').length){
+        $('.similar-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                },
+            ]
+        });
+    }
     if($('.job-description-block').length){
         $('.view-more-link').on('click', function(){
             $(this).hide();
@@ -135,7 +162,7 @@ $(document).ready(function() {
                         centerMode: true,
                     }
                 },
-        ]
+            ]
             // more settings
         }
         slick_on_mobile( $slick_slider, settings_slider);

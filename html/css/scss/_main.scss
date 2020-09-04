@@ -1219,7 +1219,8 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
     }
     .similar-job-sidebar { margin-top: 180px;
-        h4 { text-align: center; color: #4E4E4E; font-weight: bold; margin-bottom: 15px; }
+        &.mt-40 { margin-top: 40px; }
+        h3 { text-align: center; color: #4E4E4E; font-weight: bold; margin-bottom: 25px; }
         .similar-job-box { display: block; color: #4E4E4E; text-decoration: none; outline: none; padding: 20px; border-bottom: 1px solid #C4C4C4;
             .box-info { @include flexbox(); @include align-items(center); margin-bottom: 10px;
                 .box-img { min-width: 40px; width: 42px; min-height: 40px; height: 40px; background: #F5F5F5; margin-right: 12px; @include flexbox(); @include align-items(center); float: left; border: 1px solid #C4C4C4; }
@@ -1229,6 +1230,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
             .job-title { font-size: 14px; font-weight: 700; }
             .job-desc { font-size: 14px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+        }
+        .similar-slider { margin-bottom: 30px;
+            .similar-job-box { border-bottom: none; border-right: 1px solid #C4C4C4; }
         }
     }
     .view-more-link { display: inline-flex; @include align-items(center); font-weight: bold; text-decoration: none; margin-bottom: 15px;
@@ -1257,10 +1261,34 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .email-description-block { border-top: 1px solid #C4C4C4; padding-top: 20px;
         .link { font-weight: 700; text-decoration: underline; }
     }
-}
-
-.admin-email-block {  
-    
+    .automatic-application-check { background: #F5F5F5; border: 1px solid #C4C4C4; padding: 30px; text-align: center; margin-top: 15px;
+        h3 { color: #32B6C4; }
+        .table-block { background: $white; text-align: left; padding: 15px 0;
+            h4 { color: #4E4E4E; font-weight: 700; padding: 0 20px; display: inline-flex; @include align-items(center);
+                .circle { background: #F9AD19; min-width: 40px; min-height: 40px; @include border-radius(50%); display: inline-block; margin-left: 40px; }
+            }
+            .table { margin-bottom: 0;
+                tbody { 
+                    td { border: none; border-left: 1px solid #c4c4c4; font-size: 14px; vertical-align: middle;
+                        .icon-check { width: 16px; height: 22px; display: inline-block; background: url('../images/icons/check.svg') 50% 50% no-repeat; background-size: contain; }
+                        a { font-weight: 700; text-decoration: underline; }
+                        &:first-child { border-left: none; white-space: nowrap; }
+                        &:nth-child(3) { text-align: center; }
+                    }
+                }
+            }
+        }
+        .app-seen { background: $white; padding: 15px; text-align: center; min-height: 140px; margin-top: 10px; 
+            h3 { color: #4E4E4E; }
+        }
+        .action { margin-top: 15px; }
+    }
+    .application-submitted-block { padding-top: 50px; 
+        h1 { margin-bottom: 20px; }
+        h3 { margin-top: 40px; }
+        .info { padding-bottom: 5px; }
+        .link { font-weight: 700; text-decoration: underline; }
+    }
 }
 .border-left { border-left: 1px solid #c4c4c4!important; }
 
@@ -1367,6 +1395,28 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
         .view-more-block, .apply-through-block, .match-details-block, .appliction-block { display: none; }
         .apply-through-block.active { display: flex; }
+        .automatic-application-check { padding: 20px; 
+            .table-block { 
+                h4 { padding: 0 10px; font-size: 12px;
+                    .circle { min-width: 30px; min-height: 30px; margin-left: 30px; }
+                }
+                .table { margin-bottom: 0;
+                    tbody { 
+                        td { font-size: 12px;
+                            .icon-check { width: 14px; height: 20px; }
+                            &:nth-child(2) { min-width: 250px; }
+                        }
+                    }
+                }
+            }
+            .app-seen { min-height: 100px; 
+                h3 { font-size: 14px; }
+            }
+        }
+        .application-submitted-block { padding-top: 40px; 
+            h1 { font-size: 16px; }
+            h3 { margin-top: 30px; }
+        }
     }
 }
 @media (max-width: 575px) {
@@ -1378,5 +1428,8 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .sliding-navbar { width: 100%; right: -100%; }
     .apply-through-block.active { flex-direction: column; align-items: center; 
         .info { text-align: center; margin-top: 15px; }
+    }
+    .job-description-block {
+        .automatic-application-check { padding: 15px; }
     }
 }
