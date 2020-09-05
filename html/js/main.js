@@ -136,9 +136,20 @@ $(document).ready(function() {
             $(this).hide();
             $('.view-more-block').slideDown();
             $('.apply-through-block').addClass('active');
-            $('.match-details-block').show();
             $('.appliction-block').show();
         })
+        if($('.match-details-link').length){
+            $('.match-details-link a').on('click', function(){
+                $('body').addClass('overflow-hidden');   
+                $('.match-details-block').addClass('active');
+            })
+        }
+        if($('.match-back-link').length){
+            $('.match-back-link').on('click', function(){
+                $('body').removeClass('overflow-hidden');   
+                $('.match-details-block').removeClass('active');
+            })
+        }
         // slider
         $slick_slider = $('.similar-job-slider');
         settings_slider = {
