@@ -1421,7 +1421,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                 .job-desc { font-size: 12px; }
             }
         }
-        .match-details-block { position: fixed; width: 100%; height: calc( 100vh - 106px ); top: -100%; left: 0; overflow: hidden; overflow-y: auto; background: #FFFFFF; padding: 30px 15px 10px; @include transition (0.3s, ease-in-out);
+        .match-details-block { position: fixed; width: 100%; height: calc( 100vh - 106px ); top: -100%; left: 0; overflow: hidden; overflow-y: auto; background: #FFFFFF; padding: 30px 15px 10px; @include transition (0.3s, ease-in-out);     z-index: 100;
             .match-back-link { margin-bottom: 15px; font-weight: bold; display: inline-flex; @include align-items(center); 
                 .icon-back { background: url(../images/icons/back-arrow-green.svg) no-repeat center center; width: 20px; height: 15px; background-size: contain; display: inline-block; margin-right: 8px; }
             }
