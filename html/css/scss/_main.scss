@@ -1337,17 +1337,18 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .status { padding-top: 5px; font-size: 14px; }
     .interview-invite { font-weight: bold; font-size: 14px; background: #FFFFFF; border: 1px solid #EC656A; border-radius: 5px; padding: 5px 10px; position: absolute; bottom: 0; right: 0; }
 }
-
-.app-tab { justify-content: center; margin-bottom: 50px;
-    .nav-item { max-width: 250px; 
-        .nav-link { border-color: #EC656A; color: #EC656A;
-            &.active { background: #EC656A; color: $white;  }
+.application-job-block {
+    .app-tab { justify-content: center; margin-bottom: 30px;
+        .nav-item { max-width: 250px; 
+            .nav-link { border-color: #EC656A; color: #EC656A;
+                &.active { background: #EC656A; color: $white;  }
+            }
         }
     }
-}
-.application-block {
-    .title-box { background: #32B6C4; padding: 8px 15px; color: $white; font-weight: bold; font-size: 14px; margin-bottom: 20px; text-align: center; 
-        &.bg-red { background: #EC656A; }
+    .application-block {
+        .title-box { background: #32B6C4; padding: 8px 15px; color: $white; font-weight: bold; font-size: 14px; margin-bottom: 20px; text-align: center; 
+            &.bg-red { background: #EC656A; }
+        }
     }
 }
 
@@ -1434,6 +1435,14 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .application-submitted-block { padding-top: 40px; 
             h1 { font-size: 16px; }
             h3 { margin-top: 30px; }
+        }
+    }
+    .application-job-block {
+        .app-tab { display: none; }
+        .form-group { margin-top: 20px; }
+        .application-block { display: none;
+            &.active { display: block; }
+            .title-box { display: none; }
         }
     }
 }

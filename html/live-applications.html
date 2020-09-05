@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="Movemeon.com">
         <meta name="Googlebot" content="noindex, nofollow">
-        <title>Job Description - Movemeon.com</title>
+        <title>Live Application - Movemeon.com</title>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" sizes="180x180">
@@ -52,91 +52,146 @@
                 <div class="container">
                     <ul class="nav nav-pills home-match-tab app-tab" id="pills-tab">
                         <li class="nav-item flex-sm-fill">
-                            <a class="nav-link active" href="#">Live applications<br>10</a>
+                            <a class="nav-link active" id="v-pills-live-app-tab" data-toggle="pill" href="#v-pills-live-app" role="tab">Live applications<br>10</a>
                         </li>
                         <li class="nav-item flex-sm-fill">
-                            <a class="nav-link" href="#">Not progressing<br>3</a>
+                            <a class="nav-link" id="v-pills-not-process-tab" data-toggle="pill" href="#v-pills-not-process" role="tab">Not progressing<br>3</a>
                         </li>
                     </ul>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                            <div class="application-block">
-                                <div class="title-box">Application received (2)</div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-live-app" role="tabpanel">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 d-md-none">
+                                    <div class="form-group">
+                                        <div class="dropdown custom-dropdown-select live-application-dropdown">
+                                          <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Application received (2)</span></button>
+                                          <ul class="dropdown-menu">
+                                              <li><button role="button" class="select-item selected" data-id="application-received">Application received (2)</button></li>
+                                              <li><button role="button" class="select-item" data-id="shortlisted">Shortlisted (2)</button></li>
+                                              <li><button role="button" class="select-item" data-id="in-interview">In interview (2)</button></li>
+                                              <li><button role="button" class="select-item" data-id="hired">Hired (1)</button></li>
+                                              <li><button role="button" class="select-item" data-id="not-progressing">Not progressing (2)</a></li>
+                                          </ul>
+                                        </div>
                                     </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
-                                    <div class="status">Application received</div>
                                 </div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 application-block active" id="application-received">
+                                    <div class="title-box">Application received (2)</div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                                        <div class="status">Application received</div>
                                     </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
-                                    <div class="status">In screening</div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                                        <div class="status">In screening</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 application-block" id="shortlisted">
+                                    <div class="title-box">Shortlisted (2)</div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                                        <div class="status">Sponsored by movemeon</div>
+                                    </div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                                        <div class="status">Shortlisted by the company</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 application-block" id="in-interview">
+                                    <div class="title-box">In interview (2)</div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Next interview - 23rd May 2020</span></div>
+                                        <div class="status">In interview</div>
+                                        <span class="interview-invite">Invited</span>
+                                    </div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Next interview - <a href="#">Add time</a></span></div>
+                                        <div class="status">Final round</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 application-block" id="hired">
+                                    <div class="title-box bg-red">Hired (1)</div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Hired - 23rd May 2020</span></div>
+                                        <div class="status">Got the job</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 d-md-none application-block" id="not-progressing">
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Closed - 23rd April 2020</span></div>
+                                        <div class="status">Not progressing further</div>
+                                    </div>
+                                    <div class="live-app-box">
+                                        <div class="app-img-name">
+                                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                        </div>
+                                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Closed - 23rd April 2020</span></div>
+                                        <div class="status">Application withdrawn</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="tab-pane" id="v-pills-not-process" role="tabpanel">
                             <div class="application-block">
-                                <div class="title-box">Shortlisted (2)</div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                        <div class="live-app-box">
+                                            <div class="app-img-name">
+                                                <div class="img"><img src="images/logo.png" alt="" /></div>
+                                                <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                            </div>
+                                            <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Closed - 23rd April 2020</span></div>
+                                            <div class="status">Not progressing further</div>
+                                        </div>
                                     </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
-                                    <div class="status">Sponsored by movemeon</div>
-                                </div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                        <div class="live-app-box">
+                                            <div class="app-img-name">
+                                                <div class="img"><img src="images/logo.png" alt="" /></div>
+                                                <a class="title" href="#">Strategy Manager at Movemeon</a>
+                                            </div>
+                                            <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Closed - 23rd April 2020</span></div>
+                                            <div class="status">Application withdrawn</div>
+                                        </div>
                                     </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
-                                    <div class="status">Shortlisted by the company</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                            <div class="application-block">
-                                <div class="title-box">In interview (2)</div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
-                                    </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Next interview - 23rd May 2020</span></div>
-                                    <div class="status">In interview</div>
-                                    <span class="interview-invite">Invited</span>
-                                </div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
-                                    </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Next interview - <a href="#">Add time</a></span></div>
-                                    <div class="status">Final round</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                            <div class="application-block">
-                                <div class="title-box bg-red">Hired (1)</div>
-                                <div class="live-app-box">
-                                    <div class="app-img-name">
-                                        <div class="img"><img src="images/logo.png" alt="" /></div>
-                                        <a class="title" href="#">Strategy Manager at Movemeon</a>
-                                    </div>
-                                    <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Hired - 23rd May 2020</span></div>
-                                    <div class="status">Got the job</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </main>

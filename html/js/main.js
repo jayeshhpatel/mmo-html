@@ -182,6 +182,14 @@ $(document).ready(function() {
             });
         };
     }
+
+    /* Live Application */
+    if ($('.live-application-dropdown').length) {
+        $('.live-application-dropdown .dropdown-menu li button').on('click', function(){
+            $('.application-block').removeClass('active');                 
+            $("div[id=" + $(this).attr("data-id") + "]").addClass("active");
+        })
+    }
     
     /* Login - Password */
     if ($('.toggle-password').length) {
