@@ -109,9 +109,26 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="view-block">
-                                    <h3 class="title">Current status: Application received</h3>
-                                    <a href="#" class="edit" data-toggle="tooltip" title="Edit"><i class="icon-pencil"></i></a>
+                                <div class="status-edit-block">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+                                            <div class="form-group">
+                                                <div class="dropdown custom-dropdown-select">
+                                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>In screening</span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button role="button" class="select-item">In screening List</button></li>
+                                                        <li><button role="button" class="select-item">Option 2</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-7 col-lg-8">
+                                            <div class="form-action text-center text-md-left">
+                                                <a href="#" class="btn btn-outline-primary">Cancel</a>
+                                                <button type="button" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="updete-desc">
                                     <i class="fa fa-calendar-o"></i><span>Expected update - 30th May 2020. Sorry for the delay we are working with the employer to get back to you asap</span>
@@ -120,21 +137,68 @@
                             <div class="application-view-block">                                
                                 <div class="view-block">
                                     <h3 class="title">Your application</h3>
-                                    <a href="#" class="edit" data-toggle="tooltip" title="Edit"><i class="icon-pencil"></i></a>
                                 </div>
                                 <div class="app-details">
-                                    <span>Expected salary: £50-60K</span><br>
-                                    <span>Notice period: 2 months</span><br>
-                                    <span>Visa status: Sponsored  - Tier 2 visa until 2020</span>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                            <div class="form-group">
+                                                <label class="label-title">Salary expectations</label>
+                                                <div class="dropdown custom-dropdown-select">
+                                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>£50-60K</span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button role="button" class="select-item">£50-60K</button></li>
+                                                        <li><button role="button" class="select-item">Option 2</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                            <div class="form-group">
+                                                <label class="label-title">Notice period</label>
+                                                <div class="dropdown custom-dropdown-select">
+                                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>2 months</span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button role="button" class="select-item">2 months</button></li>
+                                                        <li><button role="button" class="select-item">Option 2</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                                            <div class="form-group">
+                                                <label class="label-title">Work eligibility</label>
+                                                <div class="dropdown custom-dropdown-select">
+                                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Sponsored</span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button role="button" class="select-item">Sponsored</button></li>
+                                                        <li><button role="button" class="select-item">Option 2</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label class="label-title" for="sponsorship-details">Sponsorship details</label>
+                                                <input type="text" class="form-control" id="sponsorship-details" placeholder="Currenlty on Tier 2 visa sponsored by current employer"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-action text-center">
+                                        <a href="#" class="btn btn-outline-primary">Cancel</a>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
                                 </div>
                                 <div class="cover-note-block">
-                                    <div class="form-group mb-0">
+                                    <div class="form-group">
                                         <label class="label-title" for="cover-note">Cover note</label>
                                         <div class="action">
-                                            <a href="#" class="icon-link" data-toggle="tooltip" title="Edit"><i class="icon-pencil"></i></a>
                                             <a href="#" class="icon-link" data-toggle="tooltip" title="Download"><i class="icon-file-download"></i></a>
                                         </div>
                                         <textarea class="form-control" id="applications" rows="5">Marzipan brownie tootsie roll jelly beans chocolate cake macaroon jelly beans chupa chups pastry. Gummies marzipan croissant powder. Marzipan brownie tootsie roll jelly beans chocolate cake macaroon jelly beans chupa chups pastry. Gummies marzipan croissant powder Marzipan brownie tootsie </textarea>
+                                    </div>
+                                    <div class="form-action text-center">
+                                        <a href="#" class="btn btn-outline-primary">Cancel</a>
+                                        <button type="button" class="btn btn-primary">Save</button>
                                     </div>
                                 </div>
                             </div>
