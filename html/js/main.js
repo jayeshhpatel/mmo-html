@@ -92,6 +92,13 @@ $(document).ready(function() {
             $(this).parents('.sub-filter-toggle').find('.sub-filter-body').slideToggle();
         });
     }
+    /* Invite Page - View More Information */
+    if ($('.invite-box').length) {
+        $('.view-full-link').on('click', function(){
+            $(this).toggleClass('active');
+            $(this).parent('.job-information').find('.view-full-desc').toggleClass('active');
+        });
+    }
 
 
     /* Login - Password */
