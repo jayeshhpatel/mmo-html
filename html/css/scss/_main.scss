@@ -2117,6 +2117,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 .unread-invite-block { padding: 40px 0; }
+.read-invite-block { padding-bottom: 40px; }
 .title-box { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 15px;
     .title { margin-bottom: 0; }
     .read-link {
