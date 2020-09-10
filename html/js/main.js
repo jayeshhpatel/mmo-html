@@ -99,6 +99,12 @@ $(document).ready(function() {
             $(this).parent('.job-information').find('.view-full-desc').toggleClass('active');
         });
     }
+    /* Profile Page - View More Information */
+    if ($('.profile-content').length) {
+        $('.more-content').on('click', function(){
+            $(this).parents('.profile-content').find('.profile-body').slideToggle();
+        });
+    }
 
 
     /* Login - Password */
