@@ -2171,6 +2171,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
     }
 }
+.not-invite-box { text-align: center; border-top: 1px solid #32B6C4; padding-top: 60px;
+    h3 { color: #4e4e4e; }
+    .form-action { margin-top: 40px; }
+}
 
 @media (max-width: 992px){
     .application-details-block .application-view-block {
@@ -2252,6 +2256,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .job-profile { margin-left: 0px; }
         .job-information { padding-top: 10px; }     
         .custom-checkbox i { font-size: 15px; }   
+    }
+    .not-invite-box { padding-top: 40px;
+        .form-action { margin-top: 30px; }
     }
 }
 @media (max-width: 575px) {
