@@ -1348,7 +1348,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             border-right:1px solid #C4C4C4;
         }
     }
-    .nav-link { padding: 5px 10px; min-height: auto; border:none; border-bottom: 1px solid $primary; max-width: 100%; background: $white; margin: 0; font-size: 16px; font-weight: 600; color: $primary; @include border-radius(0px); text-align: center;
+    .nav-link { padding: 5px 10px; border:none; border-bottom: 1px solid $primary; max-width: 100%; background: $white; margin: 0; font-size: 16px; font-weight: 600; color: $primary; @include border-radius(0px); text-align: center; min-height: 54px; @include flexbox; @include align-items(center); @include justify-content(center);
         @media (max-width: 767px) {
             font-size: 14px; 
         }
@@ -2121,7 +2121,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 .unread-invite-block { padding: 40px 0; }
 .read-invite-block { padding-bottom: 40px; }
-.title-box { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 15px;
+.invite-content-block .title-box { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 15px;
     .title { margin-bottom: 0; }
     .read-link {
         .link { @include flexbox(); @include align-items(center); color: #4E4E4E; font-size: 14px;
@@ -2175,6 +2175,30 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     h3 { color: #4e4e4e; }
     .form-action { margin-top: 40px; }
 }
+.profile-content-block { padding: 15px 50px 30px;
+    .icon-circle-plus { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/circle-plus.svg') center center no-repeat; background-size: contain; }
+    .upload-cv-link { @include flexbox(); @include align-items(center); font-weight: bold; 
+        .icon-file { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/application.svg') center center no-repeat; background-size: contain; margin-right: 10px; }
+        a { padding-right: 5px; }
+    }
+    .cv-alert { font-weight: bold; padding: 15px; margin-bottom: 30px; }
+    .action { padding-top: 30px; text-align: center; }
+    hr { border-color: #c4c4c4; margin-top: 25px; margin-bottom: 25px; 
+        &.hr-primary { border-color: #32B6C4; }
+    }
+    h2 { margin-bottom: 12px;  @include flexbox(); @include justify-content(space-between); }
+    .profile-info {
+        .title { color: #4E4E4E; margin-bottom: 3px; @include flexbox(); @include justify-content(space-between); }
+        .description { @include flexbox(); @include justify-content(space-between);
+            .info { 
+                &.with-margin { margin: 8px 0 30px; }
+                span { display: block; 
+                    &.experience-span { display: inline-block; @include border-radius(50px); background: rgba(50, 182, 196, 0.5); border: 1px solid #32B6C4; font-size: 14px; font-weight: bold; padding: 5px 15px; margin: 0px 5px 5px; }
+                } 
+            }            
+        }
+    }
+}
 
 @media (max-width: 992px){
     .application-details-block .application-view-block {
@@ -2184,6 +2208,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .close-date { margin-left: 0; margin-top: 5px; }
         }
     }
+    .profile-content-block { padding: 15px 20px 30px; }
 }
 
 @media (max-width: 767px){
@@ -2259,6 +2284,20 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
     .not-invite-box { padding-top: 40px;
         .form-action { margin-top: 30px; }
+    }
+    .profile-content-block { padding: 15px 0px 20px;      
+        hr { margin-top: 20px; margin-bottom: 20px; }
+        h2 { margin-bottom: 10px; }
+        .profile-info {
+            .description { 
+                .info { 
+                    &.with-margin { margin: 8px 0 20px; }
+                    span { 
+                        &.experience-span { font-size: 12px; }
+                    } 
+                }            
+            }
+        }
     }
 }
 @media (max-width: 575px) {
