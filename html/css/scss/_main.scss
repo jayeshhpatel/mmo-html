@@ -36,14 +36,13 @@ input[type="button"] {@include transition(0.3s, ease-in-out);}
     text-decoration: none !important;
 
     &:hover {
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !important;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !important;
+        -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important;
     }
     &.focus, &:focus {
-        outline: none !important;
         // box-shadow: none !important;
-        -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2) !important;
-        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2) !important;
+        -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5) !important;
     }
 
     &.disabled,
@@ -74,12 +73,14 @@ input[type="button"] {@include transition(0.3s, ease-in-out);}
 
     &.disabled,
     &:disabled {
-        background-color: #ADBDBA;
-        border-color: #ADBDBA;
-
+        border-width: 1px;
+        background-color: $light;
+        border-color: #c4c4c4;
+        color: #c4c4c4;
         &:hover, &:focus, &:active {
-            background: #ADBDBA !important;
-            border-color: #ADBDBA !important;
+            background: $light !important;
+            border-color: #c4c4c4 !important;
+            color: #c4c4c4;
         }
     }
 }
@@ -93,15 +94,14 @@ input[type="button"] {@include transition(0.3s, ease-in-out);}
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active:focus, 
     &:not(:disabled):not(.disabled):active:focus {
-        color: #fff !important;
-        background-color: $primaryHover !important;
+        color: $primary !important;
+        background-color: $white !important;
         border-color: $primaryHover !important;
-        box-shadow: none !important;
     }
 
     &.disabled,
     &:disabled {
-        border-width: 1px;
+        border-width: 2px;
         background-color: $light;
         border-color: #c4c4c4;
         color: #c4c4c4;
@@ -152,12 +152,40 @@ input[type="button"] {@include transition(0.3s, ease-in-out);}
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active:focus, 
     &:not(:disabled):not(.disabled):active:focus {
-        color: #fff !important;
-        background-color: $secondaryHover !important;
+        color: $secondaryHover !important;
+        background-color: $white !important;
         border-color: $secondaryHover !important;
-        box-shadow: none !important;
     }
 
+    &.disabled,
+    &:disabled {
+        border-width: 1px;
+        background-color: $light;
+        border-color: #c4c4c4;
+        color: #c4c4c4;
+        &:hover, &:focus, &:active {
+            background: $light !important;
+            border-color: #c4c4c4 !important;
+            color: #c4c4c4;
+        }
+    }
+}
+
+.btn-outline-light {
+    color: #4e4e4e;
+    border: 1px solid #C4C4C4;
+    font-weight: normal;
+    &:hover,&:focus,
+    &:not(:disabled) {
+        color: #4e4e4e !important;
+        background-color: $white !important;
+        border-color: #C4C4C4 !important;
+    }
+    &.active,  &:active {  
+        color: #32B6C4 !important;
+        background-color: $white !important;
+        border-color: #32B6C4 !important;
+    }
     &.disabled,
     &:disabled {
         border-width: 1px;
@@ -181,6 +209,12 @@ input[type="button"] {@include transition(0.3s, ease-in-out);}
     font-weight: 700;
     &:hover { 
         text-decoration: none !important;
+    }
+    &.disabled,
+    &:disabled { 
+        pointer-events: none;
+        color: #C4C4C4;
+        text-decoration: none;
     }
 }
 
@@ -396,6 +430,14 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         @include border-radius(5px);
         font-weight: 300;
 
+        &:focus {
+            border-color: #32B6C4; 
+            box-shadow: none !important;
+        }
+        &:disabled {
+            background: #F5F5F5; 
+            border-color: #C4C4C4;
+        }
         // @media (max-width: 767px){
         //     @include border-radius(30px);
         // }
@@ -443,10 +485,20 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
             &:focus ~ .custom-control-label::before {
                 box-shadow: none !important;
+                border-color: #32B6C4;
+                background: $white;
+            }
+            &:active ~ .custom-control-label::before {
+                border-color: #32B6C4;
+                background: $white;
             }
 
             &:focus:not(:checked) ~ .custom-control-label::before {
                 border-color: $primary;
+            }
+            &:disabled ~ .custom-control-label::before, &[disabled] ~ .custom-control-label::before {
+                background-color: #f5f5f5; 
+                border-color: #f5f5f5;
             }
         }
     }
@@ -473,6 +525,11 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
     }
     
+    &.error {  
+        & > input { border-color: $red !important; }
+        .error-text { color: #EC656A; font-size: 12px; text-align: left !important; display: block;  padding-left: 15px; }
+    }
+
     .is-invalid.input-group-addon {
         border-color: $red !important;
     }
@@ -480,7 +537,17 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .invalid-feedback {
         color: $red;
     }
+
+    &.search-group-input {  position: relative;
+        & > input { 
+            @include border-radius(50px !important); 
+            padding-left: 40px; 
+        } 
+        & > .icon { position: absolute; left: 15px; width: 20px; top: 8px; z-index: 4; margin-top: -1px; }
+    }
 }
+
+
 
 .form-group-label { position: relative; 
     .form-control { height: 40px;
@@ -529,6 +596,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         span.text-placeholder {
             opacity: 0.6;
         }
+        &:hover { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
     }
 
     .dropdown-menu {
@@ -593,6 +661,27 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         visibility: visible;
       }
 
+    &.disabled {
+        .custom-select-label { pointer-events: none; background-color: #f5f5f5; }
+    }
+    // &.error {
+    //     .custom-select-label { border-color: #EC656A !important }
+    //     .error-text { color: #EC656A; font-size: 12px; display: block; text-align: left !important; }
+    // }
+
+}
+
+.tag { position: relative;
+    input[type="checkbox"] { opacity: 0; position: fixed; width: 0; 
+        &:focus + label { border-color: $primary; }
+        &:checked + label { border-color: $primary; background: rgba(50, 182, 196, 0.5); font-weight: bold; }  
+        &:disabled + label { background: #f5f5f5; pointer-events: none; color: #c4c4c4; }  
+    }
+    label { border: 1px solid #C4C4C4; display: inline-block; background: #ffffff; border-radius: 50px; padding: 8px 25px; font-size: 14px; color: #4E4E4E; cursor: pointer; 
+        &.bg-green { border: 1px solid $primary; background: rgba(50, 182, 196, 0.5); border-radius: 50px; font-weight: 600; }
+        span { display: block; }
+        &:hover { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
+    }
 }
 
 .input-group {
@@ -631,7 +720,13 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .custom-control-label {
         &::after, &::before {
             width: 20px; height: 20px; top: 2px;
-        }
+        }        
+    }
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before { background-color: $white; }
+    .custom-control-input:focus ~ .custom-control-label::before { box-shadow: none; border-color: #32B6C4; }
+    .custom-control-input:disabled ~ .custom-control-label::before, .custom-control-input[disabled] ~ .custom-control-label::before {
+        background-color: #f5f5f5;
+        border-color: #f5f5f5;
     }
 }
 
@@ -1310,18 +1405,14 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .search-input { margin-bottom: 20px; 
     .input-group {position: relative;
         & > input { border-radius: 50px !important; -moz-border-radius: 50px !important; -webkit-border-radius: 50px !important; padding-left: 40px; font-size: 14px; min-height: 35px; }
-        & > .icon { position: absolute; left: 15px; width: 20px; top: 50%; z-index: 4; margin-top: -1px; 
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
+        & > .icon { position: absolute; left: 15px; width: 20px; top: 8px; z-index: 4; margin-top: -1px; }
         & > .input-group-append {z-index: 4; position: absolute; right: 0px; top: 0px;
             .btn { @include border-radius(50px); min-width: 85px; height: 35px; }
         }
     }
 }
+
+
 
 .alert-primary { text-align: center; color: #ffffff; background: $primary; border-color: $primary; @include border-radius(0px); font-weight: bold; padding: 15px; position: relative; padding-right: 50px;
     .close { color: #ffffff; opacity: 1; top: 50%; 
@@ -2178,6 +2269,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .profile-content-block { padding: 15px 50px 30px;
     .icon-circle-plus { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/circle-plus.svg') center center no-repeat; background-size: contain; }
     .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
+    .icon-delete { width: 14px; height: 18px; display: inline-block; background: url('../images/icons/delete.svg') center center no-repeat; background-size: contain; }
     .upload-cv-link { @include flexbox(); @include align-items(center); font-weight: bold; 
         .icon-file { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/application.svg') center center no-repeat; background-size: contain; margin-right: 10px; }
         a { padding-right: 5px; }
@@ -2197,7 +2289,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                     &.experience-span { display: inline-block; @include border-radius(50px); background: rgba(50, 182, 196, 0.5); border: 1px solid #32B6C4; font-size: 14px; font-weight: bold; padding: 5px 15px; margin: 0px 5px 5px; }
                 } 
                 .form-group { margin-top: 10px; 
-                    .label-title { padding-left: 0;
+                    .label-title { 
                         i { margin-left: 8px; }
                         strong { display: block; }
                     }
