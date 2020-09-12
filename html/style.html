@@ -20,7 +20,8 @@
     <link href="css/main.css" rel="stylesheet">
     <style>
         .table-responsive { overflow-y: hidden; }
-        .table tr th, .table tr td { width: 25%; padding: 15px 12px; }
+        .table tr th, .table tr td { width: 25%; padding: 15px 12px; text-align: center; }
+        .table tr td .form-group { text-align: left; }
         .table tr td .form-group input { min-width: 180px; }
         .table tr td .btn { min-width: 130px; }
     </style>
@@ -34,7 +35,7 @@
 <main class="main-container" role="main" class="flex-shrink-0">
     <div class="container">
         <div class="table-responsive py-4">
-            <table class="table text-center">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Simple</th>
@@ -91,6 +92,28 @@
                             <div class="form-group search-group-input mb-0 error">
                                 <input type="text" class="form-control" placeholder="Search">
                                 <span class="icon"><i class="fa fa-search"></i></span>
+                                <span class="error-text">error message</span>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group mb-0">
+                                <label for="text" class="label-title">Text</label>
+                                <input type="text" class="form-control" placeholder="Text">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group mb-0">
+                                <label for="text" class="label-title">Text</label>
+                                <input type="text" class="form-control" placeholder="Text" disabled>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group mb-0 error">
+                                <label for="text" class="label-title">Text</label>
+                                <input type="text" class="form-control" placeholder="Text">
                                 <span class="error-text">error message</span>
                             </div>
                         </td>
@@ -185,7 +208,7 @@
                             </div>
                         </td>
                         <td>
-                            <!-- <div class="form-group mb-0">
+                            <div class="form-group mb-0">
                                 <div class="dropdown custom-dropdown-select error">
                                   <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Click Here</span></button>
                                   <ul class="dropdown-menu">
@@ -196,7 +219,7 @@
                                   </ul>
                                   <span class="error-text">error message</span>
                                 </div>
-                            </div> -->
+                            </div> 
                         </td>
                         <td></td>
                     </tr>

@@ -91,6 +91,10 @@ $(document).ready(function() {
             $(this).toggleClass('open');
             $(this).parents('.sub-filter-toggle').find('.sub-filter-body').slideToggle();
         });
+        $('.sub-filter-toggle .sub-filter-checkbox-title .arrow').on('click', function(){
+            $(this).parent('.sub-filter-checkbox-title').toggleClass('open');
+            $(this).parents('.sub-filter-toggle').find('.sub-filter-body').slideToggle();
+        });
     }
     /* Invite Page - View More Information */
     if ($('.invite-box').length) {
@@ -102,6 +106,7 @@ $(document).ready(function() {
     /* Profile Page - View More Information */
     if ($('.profile-content').length) {
         $('.more-content').on('click', function(){
+            $(this).toggleClass('active')
             $(this).parents('.profile-content').find('.profile-body').slideToggle();
         });
     }

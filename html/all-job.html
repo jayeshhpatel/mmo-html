@@ -295,7 +295,7 @@
                             <div class="flex-span">Minimum
                                 <div class="dropdown custom-dropdown-select icon-dropdown-select">
                                     <span class="icon"><i class="fa fa-eur"></i></span>
-                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>100</span></button>
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">100</a></li>
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">1000</a></li>
@@ -307,7 +307,7 @@
                             <div class="flex-span">Maximum
                                 <div class="dropdown custom-dropdown-select icon-dropdown-select">
                                     <span class="icon"><i class="fa fa-eur"></i></span>
-                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>100</span></button>
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">100</a></li>
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">1000</a></li>
@@ -327,7 +327,7 @@
                             <div class="flex-span">Minimum
                                 <div class="dropdown custom-dropdown-select icon-dropdown-select">
                                     <span class="icon"><i class="fa fa-eur"></i></span>
-                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>100</span></button>
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">100</a></li>
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">1000</a></li>
@@ -339,7 +339,7 @@
                             <div class="flex-span">Maximum
                                 <div class="dropdown custom-dropdown-select icon-dropdown-select">
                                     <span class="icon"><i class="fa fa-eur"></i></span>
-                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>100</span></button>
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">100</a></li>
                                         <li><a href="javascript:void(0)" role="menuitem" class="select-item">1000</a></li>
@@ -355,36 +355,84 @@
                             <h4>Industry preferences</h4>
                             <span class="arrow"><i class="fa fa-angle-down"></i></span>
                         </div>
-                        <div class="filter-body">                                
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="industry-preferences1">
-                                    <label class="custom-control-label" for="industry-preferences1">Start-up - 20</label>
+                        <div class="filter-body">    
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="industry-preferences1">
+                                        <label class="custom-control-label" for="industry-preferences1">Start-up - 20</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="industry-preferences2">
-                                    <label class="custom-control-label" for="industry-preferences2">PE&VC -15</label>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="sub-start-up1">
+                                        <label class="custom-control-label" for="sub-start-up1">Start-up - 20</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="sub-start-up2">
+                                        <label class="custom-control-label" for="sub-start-up2">Start-up - 20</label>
+                                    </div>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="industry-preferences3">
-                                    <label class="custom-control-label" for="industry-preferences3">Boutique consulting -20</label>
+                            </div>                            
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="industry-preferences2">
+                                        <label class="custom-control-label" for="industry-preferences2">PE&VC -15</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="industry-preferences4">
-                                    <label class="custom-control-label" for="industry-preferences4">Large consulting - 20</label>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pe-vc1">
+                                        <label class="custom-control-label" for="pe-vc1">SUB PE&VC -15</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pe-vc2">
+                                        <label class="custom-control-label" for="pe-vc2">SUB PE&VC -15</label>
+                                    </div>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                            </div>                            
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="industry-preferences3">
+                                        <label class="custom-control-label" for="industry-preferences3">Boutique consulting - 20</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="boutique-consulting1">
+                                        <label class="custom-control-label" for="boutique-consulting1">Boutique consulting -2</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="boutique-consulting2">
+                                        <label class="custom-control-label" for="boutique-consulting2">Boutique consulting -1</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex-span justify-content-center mb-0"><a href="#" class="font-weight-bold">View more (15)</a></div>
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="industry-preferences4">
+                                        <label class="custom-control-label" for="industry-preferences4">Large consulting - 20</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="large-consulting1">
+                                        <label class="custom-control-label" for="large-consulting1">Large consulting -2</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="large-consulting2">
+                                        <label class="custom-control-label" for="large-consulting2">Large consulting -1</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-span justify-content-center mb-0"><a href="#" class="btn-underline">View more (15)</a></div>
                         </div>
                     </div>
                     <div class="filter-box filter-toggle">
@@ -392,36 +440,84 @@
                             <h4>Function preferences</h4>
                             <span class="arrow"><i class="fa fa-angle-down"></i></span>
                         </div>
-                        <div class="filter-body">
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="function-preferences1">
-                                    <label class="custom-control-label" for="function-preferences1">Strategy - 40</label>
+                        <div class="filter-body">    
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="function-preferences1">
+                                        <label class="custom-control-label" for="function-preferences1">Strategy - 40</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="function-preferences2">
-                                    <label class="custom-control-label" for="function-preferences2">Operations - 20</label>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="strategy1">
+                                        <label class="custom-control-label" for="strategy1">Strategy - 4</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="strategy2">
+                                        <label class="custom-control-label" for="strategy2">Strategy - 2</label>
+                                    </div>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="function-preferences3">
-                                    <label class="custom-control-label" for="function-preferences3">General Management - 2</label>
+                            </div>                            
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="function-preferences2">
+                                        <label class="custom-control-label" for="function-preferences2">Operations - 20</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
-                            </div>
-                            <div class="flex-span">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="function-preferences4">
-                                    <label class="custom-control-label" for="function-preferences4">Sales - 10</label>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="operation1">
+                                        <label class="custom-control-label" for="operation1">SUB Operations - 20</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="operation2">
+                                        <label class="custom-control-label" for="operation2">SUB Operations - 20</label>
+                                    </div>
                                 </div>
-                                <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                            </div>                            
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="function-preferences3">
+                                        <label class="custom-control-label" for="function-preferences3">General Management - 2</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="general-management1">
+                                        <label class="custom-control-label" for="general-management1">General Management -2</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="general-management2">
+                                        <label class="custom-control-label" for="general-management2">General Management -1</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex-span justify-content-center mb-0"><a href="#" class="font-weight-bold">View more (23)</a></div>
+                            <div class="sub-filter-toggle">
+                                <div class="sub-filter-checkbox-title">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="function-preferences4">
+                                        <label class="custom-control-label" for="function-preferences4">Sales - 10</label>
+                                    </div>
+                                    <span class="arrow"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="sub-filter-body" style="display: none;">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="sales1">
+                                        <label class="custom-control-label" for="sales1">Sales -2</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="sales2">
+                                        <label class="custom-control-label" for="sales2">Sales -1</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-span justify-content-center mb-0"><a href="#" class="btn-underline">View more (23)</a></div>
                         </div>
                     </div>
                     <div class="filter-box filter-toggle">
@@ -486,7 +582,7 @@
                                     <label class="custom-control-label" for="language4">Spanish - 10</label>
                                 </div>
                             </div>
-                            <div class="flex-span justify-content-center mb-0"><a href="#" class="font-weight-bold">View more (5)</a></div>
+                            <div class="flex-span justify-content-center mb-0"><a href="#" class="btn-underline">View more (5)</a></div>
                         </div>
                     </div>
                     <div class="filter-box filter-toggle">

@@ -106,9 +106,15 @@
             </li>
         </ul>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="profile-content-block">
-            <div class="upload-cv-link"><i class="icon-file"></i><a href="#">Upload your CV</a><span> to fill it automatically</span></div>
+            <div class="upload-cv-link">
+                <label class="upload-file btn-ripple">
+                    <input type="file" required="">
+                    <i class="fa fa-file-o font-20"></i><span>Upload CV</span>
+                </label>
+                <span> to fill it automatically</span>
+            </div>
             <hr class="hr-primary">
             <h2>Personal information</h2>
             <div class="row">
@@ -218,16 +224,58 @@
                 </div>
             </div>
             <hr>
-            <h2>Work experience</h2>
+            <h2><span>Work experience</span><a href="#" class="delete-link"><i class="icon-delete"></i></i></a></h2>
             <div class="row">
-                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                     <div class="form-group">
                         <label for="company" class="label-title">Company</label>  
                         <input type="email" class="form-control" id="company" />
                     </div>
-                </div>
-                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">
-                    <a href="#" class="delete-link"><i class="icon-delete"></i></a>
+                    <div class="form-group">
+                        <label for="position" class="label-title">Position</label>  
+                        <input type="text" class="form-control" id="position" />
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                            <label for="job-type" class="label-title">Job type</label>     
+                            <div class="dropdown custom-dropdown-select">
+                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Job type</span></button>
+                                <ul class="dropdown-menu">
+                                    <li><button role="button" class="select-item">Job type List</button></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                            <label for="start-date" class="label-title">Start date</label>     
+                            <div class="dropdown custom-dropdown-select">
+                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
+                                <ul class="dropdown-menu">
+                                    <li><button role="button" class="select-item">mm/yy</button></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                            <label for="job-type" class="label-title">End date</label>     
+                            <div class="dropdown custom-dropdown-select">
+                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
+                                <ul class="dropdown-menu">
+                                    <li><button role="button" class="select-item">mm/yy</button></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group custom-control custom-checkbox col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                            <input type="checkbox" class="custom-control-input" id="currently-work-here">
+                            <label class="custom-control-label" for="currently-work-here">I currently work here</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

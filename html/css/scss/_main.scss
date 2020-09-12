@@ -664,10 +664,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     &.disabled {
         .custom-select-label { pointer-events: none; background-color: #f5f5f5; }
     }
-    // &.error {
-    //     .custom-select-label { border-color: #EC656A !important }
-    //     .error-text { color: #EC656A; font-size: 12px; display: block; text-align: left !important; }
-    // }
+    &.error {
+        .custom-select-label { border-color: #EC656A !important }
+        .error-text { color: #EC656A; font-size: 12px; display: block; text-align: left !important; }
+    }
 
 }
 
@@ -1480,7 +1480,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .flex-span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 8px; line-height: 1.3; }   
                
             
-            .custom-control:not(.custom-switch) {margin-bottom: 5px; padding-left: 1.8rem;
+            .custom-control:not(.custom-switch) { /* margin-bottom: 5px; */ padding-left: 1.8rem;
                 .custom-control-label {
                     &::after {
                         left: -1.8rem;
@@ -1515,7 +1515,11 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .icon { cursor: pointer; color: $bodyfontcolor; width: 20px; height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-end); cursor: pointer; margin-top: 3px; margin-left: 10px; }
         }
     }
-    .filter-type-dropdown { max-width: 120px; }
+    .filter-type-dropdown { max-width: 120px; 
+        .custom-select-label { 
+            &:hover { box-shadow: none !important; }
+         }
+    }
     .job-box { position: relative; border-bottom: 1px solid $MMO_lightgray; padding-bottom: 15px; margin-bottom: 15px; 
         h4 {
             font-weight: bold; font-size: 14px; color: $bodyfontcolor;
@@ -1693,6 +1697,19 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .sub-filter-toggle{
+    .sub-filter-checkbox-title { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 5px; 
+        .arrow { font-size: 18px; min-width: 20px; min-height: 20px; @include flexbox(); @include align-items(center); @include justify-content(flex-start); color: $primary; cursor: pointer; transition: all 0.3s ease-in-out; margin-left: 5px; }
+        &.open { 
+            .arrow {
+                -webkit-transform: rotateX(180deg);
+                -moz-transform: rotateX(180deg);
+                -ms-transform: rotateX(180deg);
+                -o-transform: rotateX(180deg);
+                transform: rotateX(180deg);
+            }
+            .custom-checkbox { .custom-control-label { font-weight: 600; } }
+        }
+    }
     .sub-filter-title {margin-bottom: 5px;
         cursor: pointer; @include flexbox(); @include align-items(center); @include justify-content(space-between); font-size: 14px;
         h5 { margin-bottom: 0px; font-size: 14px; font-weight: 500; color: $bodyfontcolor; }
@@ -1708,6 +1725,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                 -o-transform: rotateX(180deg);
                 transform: rotateX(180deg);
             }
+            .custom-checkbox { .custom-control-label { font-weight: 600; } }
         }
 
     }
@@ -2266,20 +2284,28 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     h3 { color: #4e4e4e; }
     .form-action { margin-top: 40px; }
 }
-.profile-content-block { padding: 15px 50px 30px;
+.profile-content-block { padding: 15px 0px 30px;
     .icon-circle-plus { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/circle-plus.svg') center center no-repeat; background-size: contain; }
     .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
     .icon-delete { width: 14px; height: 18px; display: inline-block; background: url('../images/icons/delete.svg') center center no-repeat; background-size: contain; }
     .upload-cv-link { @include flexbox(); @include align-items(center); font-weight: bold; 
-        .icon-file { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/application.svg') center center no-repeat; background-size: contain; margin-right: 10px; }
-        a { padding-right: 5px; }
+        .upload-file { margin-bottom: 0; margin-right: 5px;
+            i { margin-right: 8px; }
+        }
     }
     .cv-alert { font-weight: bold; padding: 15px; margin-bottom: 30px; }
     .action { padding-top: 30px; text-align: center; }
     hr { border-color: #c4c4c4; margin-top: 25px; margin-bottom: 25px; 
         &.hr-primary { border-color: #32B6C4; }
     }
-    h2 { margin-bottom: 12px;  @include flexbox(); @include justify-content(space-between); }
+    h2 { margin-bottom: 12px;  @include flexbox(); @include justify-content(space-between); 
+        .more-content { 
+            i { @include transition(0.3s, ease-in-out); }
+            &.active {
+                i { -ms-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+            }
+        }
+    }
     .profile-info {
         .title { color: #4E4E4E; margin-bottom: 3px; @include flexbox(); @include justify-content(space-between); }
         .description { @include flexbox(); @include justify-content(space-between);
