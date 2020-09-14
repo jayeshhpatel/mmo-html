@@ -671,7 +671,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 
 }
 
-.tag { position: relative;
+.tag { position: relative; display: inline-block; margin: 0 5px 10px;
     input[type="checkbox"] { opacity: 0; position: fixed; width: 0; 
         &:focus + label { border-color: $primary; }
         &:checked + label { border-color: $primary; background: rgba(50, 182, 196, 0.5); font-weight: bold; }  
@@ -1738,6 +1738,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .icon-pencil { width: 16px; height: 16px; display: inline-block; background: url('../images/icons/pencil.svg') center center no-repeat; background-size: contain; }
+.icon-delete { width: 14px; height: 18px; display: inline-block; background: url('../images/icons/delete.svg') center center no-repeat; background-size: contain; }
 
 .wish-list:hover {
     display: inline-block;
@@ -2284,10 +2285,12 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     h3 { color: #4e4e4e; }
     .form-action { margin-top: 40px; }
 }
-.profile-content-block { padding: 15px 0px 30px;
+
+.tag-span { display: inline-block !important; @include border-radius(50px); background: rgba(50, 182, 196, 0.5); border: 1px solid #32B6C4; font-size: 14px; font-weight: bold; padding: 5px 15px; margin: 0px 5px 5px; }
+.profile-content-block { padding: 15px 0px 30px;    
     .icon-circle-plus { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/circle-plus.svg') center center no-repeat; background-size: contain; }
     .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
-    .icon-delete { width: 14px; height: 18px; display: inline-block; background: url('../images/icons/delete.svg') center center no-repeat; background-size: contain; }
+    
     .upload-cv-link { @include flexbox(); @include align-items(center); font-weight: bold; 
         .upload-file { margin-bottom: 0; margin-right: 5px;
             i { margin-right: 8px; }
@@ -2306,15 +2309,18 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
         }
     }
-    .profile-info {
+    .profile-info { 
         .title { color: #4E4E4E; margin-bottom: 3px; @include flexbox(); @include justify-content(space-between); }
         .description { @include flexbox(); @include justify-content(space-between);
             .info { min-width: 100%;
                 &.with-margin { margin: 8px 0 30px; }
-                span { display: block; 
-                    &.experience-span { display: inline-block; @include border-radius(50px); background: rgba(50, 182, 196, 0.5); border: 1px solid #32B6C4; font-size: 14px; font-weight: bold; padding: 5px 15px; margin: 0px 5px 5px; }
-                } 
-                .form-group { margin-top: 10px; 
+                &.experience-info { display: none;
+                    &.active { display: block; }
+                }
+                span { display: block; } 
+                .form-group {  
+                    .delete-link { display: inline-block; margin-left: 15px; margin-bottom: 5px; }
+                    &.mt-30 { margin-top: 32px; }
                     .label-title { 
                         i { margin-left: 8px; }
                         strong { display: block; }
@@ -2323,11 +2329,66 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                     .mw-90 { max-width: 90px; }
                 }
             }  
+            .edit-info-block { margin: 8px 0 30px; display: none;
+                &.active { display: block; }
+            }
             .form-action { margin-top: 20px; text-align: center;
                 .btn { margin: 0 5px; }
             }          
         }
+        .experience-edit-link {display: none;
+            &.active { display: block; }
+        }
     }
+}
+
+.matching-criteria-block { padding: 15px 0px 30px;
+    .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
+    .back-link { margin-bottom: 20px;
+        .icon-back { background: url(../images/icons/back-arrow-green.svg) no-repeat center center; width: 20px; height: 15px; background-size: contain; display: inline-block; margin-right: 8px; }
+        a { font-weight: bold; @include flexbox(); @include align-items(center); }
+    }
+    hr { border-color: #c4c4c4; margin-top: 25px; margin-bottom: 25px; 
+        &.hr-primary { border-color: #32B6C4; }
+    }
+    .main-title { display: inline-flex; @include align-items(center);  
+        .icon-info { margin-left: 15px; }        
+    }
+    .sub-info { margin-bottom: 20px; }
+    .description-block {
+        .edit-data-link { @include flexbox(); @include align-items(center); @include justify-content(space-between); 
+            i { margin-left: 10px; }
+        }
+        .edit-body { margin: 8px 0 30px;
+            .edit-data { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 15px; 
+                i { margin-left: 10px; }
+            }
+            .compensation-info {  
+                span { display: inline-block; margin: 0 25px 5px 0; }
+            }
+        }
+    }
+}
+
+.file-content-block { padding: 15px 0px 30px;
+    .icon-file-green { width: 24px; height: 24px; display: inline-block; background: url('../images/icons/application-active.svg') center center no-repeat; background-size: contain; }
+    .icon-file { width: 24px; height: 24px; display: inline-block; background: url('../images/icons/application.svg') center center no-repeat; background-size: contain; }
+    .icon-download-green { width: 16px; height: 16px; display: inline-block; background: url('../images/icons/file-download-green.svg') center center no-repeat; background-size: contain; }
+    .icon-download { width: 16px; height: 16px; display: inline-block; background: url('../images/icons/file-download.svg') center center no-repeat; background-size: contain; }
+    .download-link { display: inline-flex; @include align-items(center); font-size: 14px; margin-top: 10px;
+        .icon-download-green { margin-left: 30px; }
+    }
+    .title { margin: 30px 0 20px; }
+    .library-items { margin-bottom: 25px; @include flexbox();
+        .file-info {
+            .name { display: inline-flex; @include align-items(center); }
+            .date { display: block; font-size: 12px; line-height: 1; }
+        }
+        .file-action { padding-left: 20px;
+            .action-link { display: inline-block; margin: 0 8px; }
+        }
+    }
+    .add-new-action { margin-top: 30px; text-align: center; }
 }
 
 @media (max-width: 992px){
@@ -2357,7 +2418,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     h2, .h2 { font-size: 16px; }
     h3, .h3 { font-size: 14px; }
 
-
+    .upload-file { font-size: 14px; }
     .alert-primary { text-align: left; }
     .live-application-block { padding: 40px 0 100px;
         .container-fluid { padding: 0 15px; }
@@ -2415,21 +2476,25 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .not-invite-box { padding-top: 40px;
         .form-action { margin-top: 30px; }
     }
+    .tag-span { font-size: 12px; }
     .profile-content-block { padding: 15px 0px 20px;      
         hr { margin-top: 20px; margin-bottom: 20px; }
         h2 { margin-bottom: 10px; }
         .profile-info {
             .description { 
                 .info { 
-                    &.with-margin { margin: 8px 0 20px; }
-                    span { 
-                        &.experience-span { font-size: 12px; }
-                    } 
+                    &.with-margin { margin: 8px 0 20px; }                    
+                    .form-group.mt-30 { margin-top: 0; }
                 }            
             }
         }
     }
+    .matching-criteria-block {
+        hr { margin-top: 20px; margin-bottom: 20px; }
+        .description-block .edit-body { margin: 8px 0 15px; }
+    }
 }
 @media (max-width: 575px) {
     .form-group.custom-checkbox { font-size: 13px; }
+    .upload-file { font-size: 13px; }
 }

@@ -96,13 +96,13 @@
     <div class="container">
         <ul class="nav nav-pills nav-fill home-match-tab" id="pills-tab">
             <li class="nav-item">
-                <a class="nav-link" href="#">Matching criteria</a>
+                <a class="nav-link" href="matching-criteria.html">Matching criteria</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="profile.html">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Files</a>
+                <a class="nav-link" href="files.html">Files</a>
             </li>
         </ul>
     </div>
@@ -118,9 +118,9 @@
             <hr class="hr-primary">
             <h2>Personal information</h2>
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                     <div class="profile-info">
-                        <h3 class="title">ELISA NICOLINI</h3>
+                        <h3 class="title mb-3">ELISA NICOLINI</h3>
                         <div class="description">
                             <div class="info">
                                 <div class="form-group">
@@ -133,7 +133,7 @@
                                           <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
                                       </ul>
                                     </div>
-                                    <input type="email" class="form-control mt-2" id="Uemail" placeholder="Email address" required="">
+                                    <input type="email" class="form-control mt-2" id="Uemail" placeholder="Email address">
                                 </div>
                                 <div class="form-group">
                                     <label for="country" class="label-title pl-0">Your gender<i class="icon-info"></i><strong>This is only for internal statistics</strong></label>
@@ -177,8 +177,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 d-none d-lg-block col-lg-4 col-xl-6"></div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-12 col-sm-12 col-md-12 d-none d-lg-block col-lg-4 col-xl-4"></div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                     <div class="profile-info">
                         <h3 class="title">&nbsp;</h3>
                         <div class="description">
@@ -224,56 +224,398 @@
                 </div>
             </div>
             <hr>
-            <h2><span>Work experience</span><a href="#" class="delete-link"><i class="icon-delete"></i></i></a></h2>
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
-                    <div class="form-group">
-                        <label for="company" class="label-title">Company</label>  
-                        <input type="email" class="form-control" id="company" />
-                    </div>
-                    <div class="form-group">
-                        <label for="position" class="label-title">Position</label>  
-                        <input type="text" class="form-control" id="position" />
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-                            <label for="job-type" class="label-title">Job type</label>     
-                            <div class="dropdown custom-dropdown-select">
-                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Job type</span></button>
-                                <ul class="dropdown-menu">
-                                    <li><button role="button" class="select-item">Job type List</button></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
-                                </ul>
+            <h2><span>Work experience</span><a href="#" class="delete-link"><i class="icon-delete"></i></a></h2>
+            <div class="profile-info">
+                <div class="description">
+                    <div class="info">
+                        <div class="form-row">
+                            <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <label for="company" class="label-title">Company</label>  
+                                <input type="email" class="form-control" id="company" />
+                            </div>
+                            <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <label for="position" class="label-title">Position</label>  
+                                <input type="text" class="form-control" id="position" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+                                <label for="job-type" class="label-title">Job type</label>     
+                                <div class="dropdown custom-dropdown-select">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Job type</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><button role="button" class="select-item">Job type List</button></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                                <label for="start-date" class="label-title">Start date</label>     
+                                <div class="dropdown custom-dropdown-select">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><button role="button" class="select-item">mm/yy</button></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                                <label for="end-date" class="label-title">End date</label>     
+                                <div class="dropdown custom-dropdown-select">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><button role="button" class="select-item">mm/yy</button></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group custom-control custom-checkbox col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-30">
+                                <input type="checkbox" class="custom-control-input" id="currently-work-here">
+                                <label class="custom-control-label" for="currently-work-here">I currently work here</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                                <label for="location" class="label-title">Location</label>     
+                                <div class="dropdown custom-dropdown-select">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Country</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><button role="button" class="select-item">Country</button></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                        <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                                <label for="city-based" class="label-title">&nbsp;</label>     
+                                <input type="text" class="form-control" id="city-based" placeholder="City where you are based">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <label for="projects-references" class="label-title">Projects and references</label>     
+                                <textarea class="form-control" rows="7" id="projects-references" placeholder="Please add a summary of projects you have worked on and any references related"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-action col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <a href="#" class="btn btn-outline-primary">Cancel</a>
+                                <button type="button" class="btn btn-primary">Save</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <label for="start-date" class="label-title">Start date</label>     
-                            <div class="dropdown custom-dropdown-select">
-                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
-                                <ul class="dropdown-menu">
-                                    <li><button role="button" class="select-item">mm/yy</button></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
-                                </ul>
+                </div>
+            </div>
+            <div class="profile-info mt-4">
+                <h3 class="title">Head of product - Movemeon</h3>
+                <div class="description">
+                    <div class="info">
+                        <span>Permanent</span>
+                        <span>Jan 2016 - now</span>
+                        <span>London, UK</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2><span>Experience</span></h2>
+            <div class="profile-info">
+                <div class="experience-block">
+                    <h3 class="title"><span>Industry experience</span> <a href="#" class="experience-edit-link" data-toggle="tooltip" title="edit"><i class="icon-pencil"></i></a></h3>
+                    <div class="description">
+                        <div class="info with-margin experience-info">
+                            <span class="tag-span">Start- up (growth stage)</span>
+                            <span class="tag-span">Start- up (early stage)</span>
+                            <span class="tag-span">E-commerce</span>
+                        </div>
+                        <div class="edit-info-block active">
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox1" checked>
+                                <label class="form-check-label" for="industry-checkbox1">Start- up (growth stage)</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox2" checked>
+                                <label class="form-check-label" for="industry-checkbox2">Start- up (early stage)</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox3" checked>
+                                <label class="form-check-label" for="industry-checkbox3">E-commerce</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox4">
+                                <label class="form-check-label" for="industry-checkbox4">E-commerce</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox5">
+                                <label class="form-check-label" for="industry-checkbox5">Retail</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox6">
+                                <label class="form-check-label" for="industry-checkbox6">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox7">
+                                <label class="form-check-label" for="industry-checkbox7">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox8">
+                                <label class="form-check-label" for="industry-checkbox8">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox9">
+                                <label class="form-check-label" for="industry-checkbox9">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox10">
+                                <label class="form-check-label" for="industry-checkbox10">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox11">
+                                <label class="form-check-label" for="industry-checkbox11">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox">
+                                <label class="form-check-label" for="industry-checkbox">Boutique consulting</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="industry-checkbox12">
+                                <label class="form-check-label" for="industry-checkbox12">Boutique consulting</label>
+                            </div>
+                            <div class="more-link text-center mt-3">
+                                <a href="#" class="btn-underline">View more</a>
+                            </div>
+                            <div class="form-action">
+                                <a href="javascript:void(0)" class="btn btn-outline-primary btn-cancel">Cancel</a>
+                                <button type="button" class="btn btn-primary">Save</button>
                             </div>
                         </div>
-                        <div class="form-group col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <label for="job-type" class="label-title">End date</label>     
-                            <div class="dropdown custom-dropdown-select">
-                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">mm/yy</span></button>
-                                <ul class="dropdown-menu">
-                                    <li><button role="button" class="select-item">mm/yy</button></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
-                                    <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
-                                </ul>
+                    </div>
+                </div>
+                <div class="experience-block">
+                    <h3 class="title"><span>Function experience </span> <a href="#" class="experience-edit-link active" data-toggle="tooltip" title="edit"><i class="icon-pencil"></i></a></h3>
+                    <div class="description">
+                        <div class="info with-margin experience-info active">
+                            <span class="tag-span">Strategy</span>
+                            <span class="tag-span">Chief of staff</span>
+                            <span class="tag-span">Product management</span>
+                        </div>
+                        <div class="edit-info-block">
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="function-checkbox1" checked>
+                                <label class="form-check-label" for="function-checkbox1">Strategy</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="function-checkbox2" checked>
+                                <label class="form-check-label" for="function-checkbox2">Chief of staff</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="function-checkbox3" checked>
+                                <label class="form-check-label" for="function-checkbox3">Product management</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="function-checkbox4">
+                                <label class="form-check-label" for="function-checkbox4">E-commerce</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="function-checkbox5">
+                                <label class="form-check-label" for="function-checkbox5">Retail</label>
+                            </div>
+                            <div class="more-link text-center mt-3">
+                                <a href="#" class="btn-underline">View more</a>
+                            </div>
+                            <div class="form-action">
+                                <a href="javascript:void(0)" class="btn btn-outline-primary btn-cancel">Cancel</a>
+                                <button type="button" class="btn btn-primary">Save</button>
                             </div>
                         </div>
-                        <div class="form-group custom-control custom-checkbox col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <input type="checkbox" class="custom-control-input" id="currently-work-here">
-                            <label class="custom-control-label" for="currently-work-here">I currently work here</label>
+                    </div>
+                </div>
+                <div class="experience-block">
+                    <h3 class="title"><span>Geography experience </span> <a href="#" class="experience-edit-link active" data-toggle="tooltip" title="edit"><i class="icon-pencil"></i></a></h3>
+                    <div class="description">
+                        <div class="info with-margin experience-info active">
+                            <span class="tag-span">France</span>
+                            <span class="tag-span">Germany</span>
+                            <span class="tag-span">Uk</span>
+                        </div>
+                        <div class="edit-info-block">
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="geography-checkbox1" checked>
+                                <label class="form-check-label" for="geography-checkbox1">France</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="geography-checkbox2" checked>
+                                <label class="form-check-label" for="geography-checkbox2">Germany</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="geography-checkbox3" checked>
+                                <label class="form-check-label" for="geography-checkbox3">Uk</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="geography-checkbox4">
+                                <label class="form-check-label" for="geography-checkbox4">E-commerce</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="geography-checkbox5">
+                                <label class="form-check-label" for="geography-checkbox5">Retail</label>
+                            </div>
+                            <div class="more-link text-center mt-3">
+                                <a href="#" class="btn-underline">View more</a>
+                            </div>
+                            <div class="form-action">
+                                <a href="javascript:void(0)" class="btn btn-outline-primary btn-cancel">Cancel</a>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-block">
+                    <h3 class="title"><span>Skills </span> <a href="#" class="experience-edit-link active" data-toggle="tooltip" title="edit"><i class="icon-pencil"></i></a></h3>
+                    <div class="description">
+                        <div class="info with-margin experience-info active">
+                            <span class="tag-span">Skill 1</span>
+                            <span class="tag-span">Skill 2</span>
+                            <span class="tag-span">Skill 3</span>
+                        </div>
+                        <div class="edit-info-block">
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="skill1" checked>
+                                <label class="form-check-label" for="skill1">Skill 1</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="skill2" checked>
+                                <label class="form-check-label" for="skill2">Skill 2</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="skill3" checked>
+                                <label class="form-check-label" for="skill3">Skill 3</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="skill4">
+                                <label class="form-check-label" for="skill4">E-commerce</label>
+                            </div>
+                            <div class="tag">
+                                <input class="form-check-input" type="checkbox" id="skill5">
+                                <label class="form-check-label" for="skill5">Retail</label>
+                            </div>
+                            <div class="more-link text-center mt-3">
+                                <a href="#" class="btn-underline">View more</a>
+                            </div>
+                            <div class="form-action">
+                                <a href="javascript:void(0)" class="btn btn-outline-primary btn-cancel">Cancel</a>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="profile-content">
+                <h2><span>Education</span><a href="#" class="more-content active"><i class="icon-circle-plus"></i></a></h2>
+                <div class="row profile-body">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="profile-info">
+                            <h3 class="title">Management- Bocconi<a href="#"><i class="icon-pencil"></i></a></h3>
+                            <div class="description">
+                                <div class="info">
+                                    <span>Master degree</span>
+                                    <span>Jan 2016 - April 2018</span>
+                                    <span>London, UK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="profile-content">
+                <h2><span>Languages spoken</span></h2>
+                <div class="profile-info">
+                    <div class="description">
+                        <div class="info">
+                            <label for="languages" class="label-title">What languages do you speak?</label> 
+                            <div class="form-row">                                
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Italian</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Italian</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Fluent</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Fluent</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1 align-self-end mt-0">
+                                    <a href="#" class="delete-link" data-toggle="tooltip" title="Delete"><i class="icon-delete"></i></a>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Italian</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Italian</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span>Fluent</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Fluent</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1 align-self-end mt-0">
+                                    <a href="#" class="delete-link" data-toggle="tooltip" title="Delete"><i class="icon-delete"></i></a>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Language</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Italian</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group col-5 col-sm-5 col-md-4 col-lg-4 col-xl-3 mt-0">
+                                    <div class="dropdown custom-dropdown-select">
+                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">Proficency</span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><button role="button" class="select-item">Proficency</button></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 2</a></li>
+                                            <li><a href="#" role="menuitem" class="select-item">Option 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-action col-12">
+                                    <a href="#" class="btn btn-outline-primary">Cancel</a>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

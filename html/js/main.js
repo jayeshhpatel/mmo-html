@@ -110,6 +110,18 @@ $(document).ready(function() {
             $(this).parents('.profile-content').find('.profile-body').slideToggle();
         });
     }
+    if ($('.profile-content-block').length) {
+        $('.experience-edit-link').on('click', function(){
+            $(this).removeClass('active');
+            $(this).parents('.experience-block').find('.experience-info').removeClass('active');
+            $(this).parents('.experience-block').find('.edit-info-block').addClass('active');
+        });
+        $('.btn-cancel').on('click', function(){
+            $(this).parents('.experience-block').find('.experience-edit-link').addClass('active');
+            $(this).parents('.experience-block').find('.experience-info').addClass('active');
+            $(this).parents('.experience-block').find('.edit-info-block').removeClass('active');
+        });
+    }
 
 
     /* Login - Password */
