@@ -2360,7 +2360,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             i { margin-left: 10px; }
         }
         .edit-body { margin: 8px 0 30px;
-            .edit-data { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 15px; 
+            .edit-data { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 10px; 
                 i { margin-left: 10px; }
             }
             .compensation-info {  
