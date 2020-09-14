@@ -2287,7 +2287,8 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .tag-span { display: inline-block !important; @include border-radius(50px); background: rgba(50, 182, 196, 0.5); border: 1px solid #32B6C4; font-size: 14px; font-weight: bold; padding: 5px 15px; margin: 0px 5px 5px; }
-.profile-content-block { padding: 15px 0px 30px;    
+.profile-content-block { padding: 15px 0px 30px;   
+    a[data-toggle="tooltip"] { cursor: pointer; }
     .icon-circle-plus { width: 20px; height: 20px; display: inline-block; background: url('../images/icons/circle-plus.svg') center center no-repeat; background-size: contain; }
     .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
     
@@ -2343,6 +2344,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .matching-criteria-block { padding: 15px 0px 30px;
+    a[data-toggle="tooltip"] { cursor: pointer; }
     .icon-info { width: 15px; height: 15px; display: inline-block; background: url('../images/icons/info.svg') center center no-repeat; background-size: contain; }
     .back-link { margin-bottom: 20px;
         .icon-back { background: url(../images/icons/back-arrow-green.svg) no-repeat center center; width: 20px; height: 15px; background-size: contain; display: inline-block; margin-right: 8px; }
@@ -2371,6 +2373,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .file-content-block { padding: 15px 0px 30px;
+    a[data-toggle="tooltip"] { cursor: pointer; }
     .icon-file-green { width: 24px; height: 24px; display: inline-block; background: url('../images/icons/application-active.svg') center center no-repeat; background-size: contain; }
     .icon-file { width: 24px; height: 24px; display: inline-block; background: url('../images/icons/application.svg') center center no-repeat; background-size: contain; }
     .icon-download-green { width: 16px; height: 16px; display: inline-block; background: url('../images/icons/file-download-green.svg') center center no-repeat; background-size: contain; }
