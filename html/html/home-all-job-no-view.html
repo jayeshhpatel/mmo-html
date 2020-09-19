@@ -93,22 +93,22 @@
     <div class="mask"></div>
 
     <main class="main-container" role="main" class="flex-shrink-0">
-        <div class="container">
-            <ul class="nav nav-pills home-match-tab" id="pills-tab">
-                <li class="nav-item flex-sm-fill">
-                    <a class="nav-link active" href="home-all-job.html">All Jobs<br>200</a>
+        <div class="container mw-container">
+            <ul class="nav nav-pills nav-fill home-match-tab" id="pills-tab">
+                <li class="nav-item">
+                    <a class="nav-link active" href="all-job.html">All Jobs<br>200</a>
                 </li>
-                <li class="nav-item flex-sm-fill">
-                    <a class="nav-link" href="home-job-matches.html">Matches<br>20</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="job-matches.html">Matches<br>20</a>
                 </li>
-                <li class="nav-item flex-sm-fill">
-                    <a class="nav-link" href="home-saved-job.html">Saved Jobs<br>3</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="saved-job.html">Saved Jobs<br>3</a>
                 </li>
             </ul>
         </div>
         <div class="container-fluid">
             <div class="filter-job row">
-                <div class="filter-sidebar col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2">
+                <div class="filter-sidebar border-right col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-none d-md-block">
                     <div class="filter-box filter-toggle">
                         <div class="filter-title open">
                             <h4>Date posted</h4>
@@ -660,16 +660,797 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <div class="col-12 col-sm-12 col-md-9 col-lg-10">
-                            <a href="#" class="font-weight-bold">Filter using my preferences</a>
+                     <!-- ONLY MOBILE START -->
+                    <div class="filter-side-block d-md-none with-border">
+                        <!-- <div class="row filter-action-nav">
+                            <div class="col-4">
+                                <button class="btn btn-icon filter-menu"><i class="icon-filter"></i>Filters<span>(2)</span></button>
+                            </div>
+                            <div class="col-4">
+                                <div class="dropdown custom-dropdown-select">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle border-0 font-12" role="button" aria-expanded="false"><i class="icon-calender"></i><span>Date posted</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)" role="menuitem" class="select-item">Since last logn</a></li>
+                                        <li><a href="javascript:void(0)" role="menuitem" class="select-item selected">Date posted</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="dropdown custom-dropdown-select mr-0">
+                                    <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle border-0 font-12" role="button" aria-expanded="false"><i class="icon-sort"></i><span>Sort by</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)" role="menuitem" class="select-item">Most Relevant</a></li>
+                                        <li><a href="javascript:void(0)" role="menuitem" class="select-item selected">Sort by</a></li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </div> -->
+
+                        <div class="action text-center">
+                            <div class="filter-menu"><a href="#" class="btn-underline filter-menu">View more filters</a><i class="fa fa-angle-down"></i></div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-2">
-                            <div class="dropdown custom-dropdown-select filter-type-dropdown">
-                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle border-0 font-12" role="button" aria-expanded="false"><span class="text-theme">Most relevant</span></button>
+                    </div>
+
+                    <div class="mobile-filter-nav">
+                        <nav>
+                            <ul class="level-1">
+                                <li class="title">
+                                    <span class="name">Filters</span>
+                                    <span class="mobile-filter--close"><i class="fa fa-times"></i></span>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Location</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Salary</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">What is your total compensation expectation?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                            <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><button role="button" class="select-item">1000</button></li>
+                                                                <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                                <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                            <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><button role="button" class="select-item">1000</button></li>
+                                                                <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                                <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Search</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Job type</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Job type</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label class="label-title" for="cv-title">CV title</label>
+                                                        <input type="text" class="form-control" id="Uid" placeholder="Start- up" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Total compensation</span>
+                                        <span class="detail">$40-50K, $50-60K, ...</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Total compensation</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">£40-50K is currently in your desired total compensation. Do you want to update it?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Manimum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu" style="">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Maximum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">No, thanks</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Day rates</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Day rates</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content text-left">
+                                                    <h4 class="menu-title">You currenty have strategy in your prferences do you want to remove it?</h4>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="yes1" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="yes1">Yes</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="no1" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="no1">No</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Industry preferences</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Industry preferences</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content text-left content-md">
+                                                    <h4 class="menu-title">Please let us know why you don't like this job, so we can improve future invites. <strong>This information is for the movemeon team only and we will not share with the employer</strong></h4>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck1">
+                                                        <label class="custom-control-label" for="feedcheck1">It is not the right seniority</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck2">
+                                                        <label class="custom-control-label" for="feedcheck2">It is not the right salary</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck3">
+                                                        <label class="custom-control-label" for="feedcheck3">I don’t want to work in startegy</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck4">
+                                                        <label class="custom-control-label" for="feedcheck4">I don’t want to work in start up</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck5">
+                                                        <label class="custom-control-label" for="feedcheck5">I don’t want to work in London</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck6">
+                                                        <label class="custom-control-label" for="feedcheck6">It is not a fit with my expereince</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck7">
+                                                        <label class="custom-control-label" for="feedcheck7">I’m not interested in the company</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="feedcheck8">
+                                                        <label class="custom-control-label" for="feedcheck8">Other</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">I don’t want to share</button>
+                                                    <button type="button" class="btn btn-primary">Send</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Function preferences</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Function preference</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label class="label-title" for="cv-title">CV title</label>
+                                                        <input type="text" class="form-control" id="Uid" placeholder="Username/Email address" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Seniority</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Seniority</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">What is your total compensation expectation?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><button role="button" class="select-item">1000</button></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                        </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><button role="button" class="select-item">1000</button></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                        </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Search</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Language required</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Day rates</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content text-left">
+                                                    <h4 class="menu-title">You currenty have strategy in your prferences do you want to remove it?</h4>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="yes2" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="yes2">Yes</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="no2" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="no2">No</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Visa sponsorship</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Visa sponsorship</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">£40-50K is currently in your desired total compensation. Do you want to update it?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Manimum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu" style="">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Maximum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">No, thanks</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Company size</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"></span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label class="label-title" for="cv-title">CV title</label>
+                                                        <input type="text" class="form-control" id="Uid" placeholder="Username/Email address" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Search</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Equity provided</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Day rates</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content text-left">
+                                                    <h4 class="menu-title">You currenty have strategy in your prferences do you want to remove it?</h4>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="yes3" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="yes3">Yes</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="no3" name="strategy" class="custom-control-input">
+                                                        <label class="custom-control-label" for="no3">No</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">No, thanks</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Function experience</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Salary</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">What is your total compensation expectation?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><button role="button" class="select-item">1000</button></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                        </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="country" class="label-title">Minimum total compensation</label>
+                                                        <div class="dropdown custom-dropdown-select icon-dropdown-select">
+                                                            <span class="icon"><i class="fa fa-eur"></i></span>
+                                                        <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">1000</span></button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><button role="button" class="select-item">1000</button></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">2000</a></li>
+                                                            <li><a href="#" role="menuitem" class="select-item">5000</a></li>
+                                                        </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Search</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Industry experience</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"></span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">£40-50K is currently in your desired total compensation. Do you want to update it?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Manimum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu" style="">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Maximum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">No, thanks</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">Skills</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>Day rates</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <div class="form-content text-left">
+                                                    <h4 class="menu-title">You currenty have strategy in your prferences do you want to remove it?</h4>
+                                                    <div class="form-content">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="yes4" name="strategy" class="custom-control-input">
+                                                            <label class="custom-control-label" for="yes4">Yes</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="no4" name="strategy" class="custom-control-input">
+                                                            <label class="custom-control-label" for="no4">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <span class="filter-name">New job</span>
+                                        <span class="arrow"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="level-2">
+                                        <li class="back">
+                                            <a href="#">
+                                                <span class="name"><i class="icon-back"></i>New jobs</span>
+                                                <span class="icon-close"><i class="fa fa-times"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="menu-body">
+                                                <h4 class="menu-title">£40-50K is currently in your desired total compensation. Do you want to update it?</h4>
+                                                <div class="form-content">
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Manimum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu" style="">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-row-grid-max-min">
+                                                        <label for="Maximum" class="label-title">Maximum total compensation</label>
+                                                        <div class="grid-max-min">
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button" aria-expanded="false"><span class="text-placeholder">€</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">£</button></li>
+                                                                    <li><button role="button" class="select-item">$</button></li>
+                                                                    <li><button role="button" class="select-item">€</button></li>
+                                                                    <li><button role="button" class="select-item">₹</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="dropdown custom-dropdown-select">
+                                                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle" role="button"><span class="text-placeholder">100</span></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button role="button" class="select-item">100</button></li>
+                                                                    <li><button role="button" class="select-item">1000</button></li>
+                                                                    <li><button role="button" class="select-item">10000</button></li>
+                                                                    <li><button role="button" class="select-item">100000</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-action text-center">
+                                                    <button type="button" class="btn btn-outline-primary back">No, thanks</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <div class="form-action text-center">
+                                        <button type="button" class="btn btn-outline-primary mobile-filter--close">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Search</button>
+                                    </div>
+                                </li>                   
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- ONLY MOBILE END -->
+                    <div class="mb-3 row">
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10 d-none d-md-block">
+                            <a href="#" class="btn-underline">Filter using my preferences</a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-none d-md-block">
+                            <div class="dropdown custom-dropdown-select filter-type-dropdown ml-auto">
+                                <button data-toggle="dropdown" class="form-control custom-select-label dropdown-toggle border-0 font-12" role="button" aria-expanded="false"><span>Sort by</span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)" role="menuitem" class="select-item selected">Most relevant</a></li>
-                                    <li><a href="javascript:void(0)" role="menuitem" class="select-item">Sort by</a></li>
+                                    <li><a href="javascript:void(0)" role="menuitem" class="select-item">Most Relevant</a></li>
+                                    <li><a href="javascript:void(0)" role="menuitem" class="select-item selected">Sort by</a></li>
                                 </ul>
                             </div>
                         </div>
