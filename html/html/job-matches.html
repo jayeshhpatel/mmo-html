@@ -107,8 +107,8 @@
         </ul>
     </div>
     <div class="container-fluid">
-        <div class="filter-job row">
-            <div class="filter-sidebar col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2">
+        <div class="filter-job row pt-0 pt-md-2">
+            <div class="filter-sidebar border-right col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-none d-md-block">
                 <div class="filter-box filter-toggle">
                     <div class="filter-title open">
                         <h4>Date posted</h4>
@@ -276,7 +276,7 @@
                 </div>
             </div>
             <div class="filter-data-block col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10">
-                <div class="search-input">
+                <div class="search-input d-none d-md-block">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Job title, company or keyword">
                         <span class="icon"><i class="fa fa-search"></i></span>
@@ -285,6 +285,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- ONLY MOBILE START -->
+                <div class="filter-side-block d-md-none with-border mt-0">
+                    <div class="alert">
+                        <span><i class="icon-mail"></i>Alerts of new matches</span>
+                        <div class="custom-control custom-switch custom-switch-md switch-primary">
+                            <input type="checkbox" class="custom-control-input" id="daily-alert">
+                            <label class="custom-control-label" for="daily-alert"></label>
+                        </div>
+                    </div>
+                    <div class="match-block">
+                        <p>Matches are all the jobs in line with your experience and preferences</p>
+                        <div class="match-job-action"><span>Not right?</span> Check your <a href="#" class="btn-underline">matching criteria</a></div>
+                    </div>
+                   
+                </div>
+
                 <div class="match-job-block">
                     <div class="job-box"> 
                         <h4>100% Match</h4>

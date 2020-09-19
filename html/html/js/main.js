@@ -259,6 +259,15 @@ $(document).ready(function() {
         });
     }
 
+    if ($('.filter-action-nav').length) {
+        $(".custom-dropdown-select .dropdown-menu .select-item").click(function() { 
+            $(this).parents('.custom-dropdown-select').find('.custom-select-label').addClass('active');
+        })
+        $(".btn.filter-menu").click(function() { 
+            $(this).addClass('active');
+        })
+    }
+
     if ($('.slider').length) {
         $('.slider').slick({
             dots: false,
@@ -418,6 +427,6 @@ $(document).ready(function() {
             $('.application-block').removeClass('active');                 
             $("div[id=" + $(this).attr("data-id") + "]").addClass("active");
         })
-    }
-
+    }   
+      
 });
