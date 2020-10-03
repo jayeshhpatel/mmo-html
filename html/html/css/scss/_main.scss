@@ -766,10 +766,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .custom-switch {
-    &.switch-primary {
-        .custom-control-input:checked ~ .custom-control-label::before { background: $white; }
-        .custom-control-input:checked ~ .custom-control-label::after { background: $primary; }
-    }
 
     /* for md */
     &.custom-switch-md .custom-control-label {
@@ -849,14 +845,14 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     input[type="checkbox"] { 
         opacity: 0; position: fixed; width: 0; 
         &:focus + label { border-color: $primary; }
-        &:checked + label { border-color: $primary; background: $primary; color: #ffffff; font-weight: 600; }  
-        &:focus + label.bg-green { border-color: $primary; }
-        &:checked + label.bg-green  { border-color: $primary; background: $primary; color: #ffffff; font-weight: 600; }  
+        &:checked + label { border-color: $primary; background: $primary; color: #ffffff; }  
     }
 
     label { border: 1px solid #C4C4C4; display: inline-block; background: #ffffff; border-radius: 50px; padding: 6px 20px; font-size: 13px; color: $bodyfontcolor; cursor: pointer; 
-        &.bg-green { border: 1px solid #C4C4C4; background: $white; border-radius: 50px; color: $white; color: $bodyfontcolor; }
+        &.bg-green { border: 1px solid $primary; background: rgba(50, 182, 196, 0.5); border-radius: 50px; font-weight: 600; }
+
         span { display: block; }
+
         &:hover { border-color: $primary }
     }
 }
@@ -1409,18 +1405,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .search-input { margin-bottom: 20px; 
     .input-group {position: relative;
         & > input { border-radius: 50px !important; -moz-border-radius: 50px !important; -webkit-border-radius: 50px !important; padding-left: 40px; font-size: 14px; min-height: 35px; }
-        & > .icon { position: absolute; left: 15px; width: 20px; top: 6px; z-index: 4; margin-top: -1px; font-size: 16px; }
+        & > .icon { position: absolute; left: 15px; width: 20px; top: 6px; z-index: 4; margin-top: -1px; }
         & > .input-group-append {z-index: 4; position: absolute; right: 0px; top: 0px;
             .btn { @include border-radius(50px); min-width: 85px; height: 35px; line-height: 1;}
-        }
-    }
-
-    @media (max-width: 767px) {
-        .input-group {position: relative;
-            & > input { padding-left: 40px; padding-right: 60px; }
-            & > .input-group-append {
-                .btn { min-width: 50px; padding: 6px 15px; }
-            }
         }
     }
 }
@@ -1458,9 +1445,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
         &:hover { background: $light; }
         &.active { background: $primary; color: $white; border: none; border-bottom: 1px solid $primary; }
-    }
-    @media (max-width: 767px) { 
-        margin: 0 -15px 15px;
     }
 }
 .filter-job { padding: 0px 50px 0px; 
@@ -1546,10 +1530,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .job-desc { font-size: 14px; font-weight: bold; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 5px; }
             .job-location { font-size: 13px; }
         }
-        @media (max-width: 767px) {
-            margin-bottom: 20px;
-            .status-block { top: -10px; }
-        }
     }
     .status-block { position: absolute; top: 0px; right: 30px;  @include flexbox(); @include align-items(center);
         @media (max-width: 767px) {
@@ -1619,63 +1599,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .filter-side-block { margin-top: 10px;
     .user-name { margin-bottom: 10px; }
     .filter-box {padding-bottom: 15px !important;}
-    .filter-action-nav { padding: 0 15px 15px; margin-left: -5px; margin-right: -5px;
-        .col-4 { padding: 0 5px; }
-        .icon-filter { min-width: 13px; height: 13px; display: inline-block; background: url('../images/icons/filter.svg') center center no-repeat; background-size: contain; }
-        .icon-sort { min-width: 15px; height: 15px; display: inline-block; background: url('../images/icons/sorting.svg') center center no-repeat; background-size: contain; }
-        .icon-calender { min-width: 15px; height: 15px; display: inline-block; background: url('../images/icons/calender.svg') center center no-repeat; background-size: contain; }
-        .btn-icon { border-radius: 50px; border: 1px solid #C4C4C4; display: inline-flex; @include align-items(center); color: #4E4E4E; font-weight: normal; min-width: 100%; padding: 6px 15px;
-            i { margin-right: 5px; }
-            span { display: none; padding-left: 3px; }
-            &:hover, &.active { border-color: #32B6C4; color: #32B6C4;
-                .icon-filter { background: url('../images/icons/filter-active.svg') center center no-repeat; }
-            }
-            &.active { span { display: inline; } }
-        }
-        .custom-dropdown-select { min-width: 100%; 
-            .custom-select-label { border-radius: 50px; border: 1px solid #C4C4C4 !important; display: inline-flex; @include align-items(center); color: #4E4E4E; font-weight: normal; height: 35px; background: none; padding: 6px 15px;
-                i { margin-right: 5px; }
-                span { white-space: normal; line-height: 1.1; }
-                &:hover, &.active { 
-                    .icon-sort { background: url('../images/icons/sorting-active.svg') center center no-repeat; }
-                    .icon-calender { min-width: 15px; height: 15px; display: inline-block; background: url('../images/icons/calender-active.svg') center center no-repeat; background-size: contain; }
-                    span { white-space: normal; color: #32B6C4; }
-                }
-                &.active { border-color: #32B6C4 !important;
-                    span { font-weight: 600; }
-                }
-            }
-        }   
-    }
-    .icon-mail { min-width: 20px; height: 20px; display: inline-block; background: url('../images/icons/mail.svg') center center no-repeat; background-size: contain; }
-    .alert { background: $primary; padding: 12px 15px; @include flexbox; @include align-items(center); @include justify-content(space-between); @include border-radius(0px); margin-top: -14px;
-        span { display: inline-flex; @include align-items(center); color: $white; 
-            i { margin-right: 8px; }
-        }
-        .custom-switch { margin-top: -9px; 
-            label { padding-left: 10px; }
-        }
-    }
-    .match-block { padding: 0 15px 15px;
-        p { font-size: 14px; color: #4E4E4E; text-align: center; margin-bottom: 5px; }
-        .match-job-action { font-weight: bold; color: #4E4E4E; text-align: center;
-            span { color: $secondary; }
-        }
-    }
-    .action { margin: 8px 0 15px; 
-        .filter-menu { display: inline-flex; @include align-items(center); cursor: pointer; 
-            i { margin-left: 5px; font-size: 20px; color: #32B6C4; }
-        }
-    }
-    &.with-border { border-bottom: 1px solid #32B6C4; margin-right: -15px; margin-left: -15px; margin-bottom: 20px; }
-    @media (max-width: 420px) { 
-        .filter-action-nav {
-            .custom-dropdown-select .custom-select-label { padding: 0px 10px;
-                i { margin-right: 3px; }
-            }
-            .btn-icon { padding: 6px 10px; font-size: 12px; height: 35px; }
-        }
-    }
+    .action { margin: 8px 0 15px; }
 }
 
 .mobile-filter-nav { position: fixed; top: 0px; left: -100%; height: 100vh; width: 100%; background: #F5F5F5;  transition: left 0.3s ease-in-out; z-index: 1036; border: 1px solid #C4C4C4; 
@@ -1858,6 +1782,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     60% { -o-transform: scale(1.1); }
     100% { -o-transform: scale(1); }
 }
+  
 
 .job-desc-header { min-height: 170px; background: $primary; padding: 15px; margin-top: 12px;
     .icon-back { background: url('../images/icons/back-arrow.svg') center center no-repeat; width: 20px; height: 15px; background-size: contain; display: inline-block; }
@@ -1951,7 +1876,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 .live-application-block { background: #F5F5F5; padding: 50px 0;
-    h1 { margin-bottom: 15px; }
     .container-fluid { padding: 0 80px; }    
 }
 .live-app-box { position: relative; background: #FFFFFF; border: 1px solid #C4C4C4; padding: 15px; margin-bottom: 15px;
@@ -1968,6 +1892,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .status { padding-top: 5px; font-size: 14px; }
     .interview-invite { font-weight: bold; font-size: 14px; background: #FFFFFF; border: 1px solid #EC656A; border-radius: 5px; padding: 5px 10px; position: absolute; bottom: 0; right: 0; }
 }
+
 
 .job-description-block {
     .job-desc-header { min-height: 170px; background: $primary; padding: 15px; margin-top: 12px;
@@ -2495,7 +2420,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     h1, .h1 { font-size: 16px; }
     h2, .h2 { font-size: 16px; }
     h3, .h3 { font-size: 14px; }
-    .mw-container { max-width: 100%; }
+
     .upload-file { font-size: 14px; }
     .alert-primary { text-align: left; }
     .live-application-block { padding: 40px 0 100px;
