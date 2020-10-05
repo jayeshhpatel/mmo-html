@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Movemeon.com">
+    <title>Home - Movemeon.com</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#666666">
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <meta name="theme-color" content="#666666">
+
+    <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header class="main-header">
+        <nav class="navbar navbar-expand-md navbar-default fixed-top shadow-sm">
+            <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="Movemeon"></a>
+            <div class="navbar-main">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item active"><a class="nav-link" href="home.html"><i class="icon-home"></i><small>Home</small></a></li>
+                    <li class="nav-item job-menu alert-arrow"><a class="nav-link" href="all-job.html"><i class="icon-job"></i><small>Jobs</small></a></li>
+                    <li class="nav-item"><a class="nav-link" href="invites.html"><i class="icon-mail"></i><small>Invites</small></a></li>
+                    <li class="nav-item"><a class="nav-link" href="application.html"><i class="icon-application"></i><small>Applications</small></a></li>
+                </ul>
+            </div>
+            <ul class="navbar-nav ml-auto right-menu">
+                <li class="nav-icon">
+                    <a href="#" title="English" data-toggle="tooltip"><span class="icon-flag-uk"></span></a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#" class="notification-menu sliding-bar" data-id="notification-menuitem"><span class="badge-label">2</span><span class="icon-bell"></span></a>
+                </li>
+                <li class="nav-item">
+                    <div class="hamburger-menu sliding-bar" data-id="hamburger-menuitem">
+                        <div class="hamburger"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <navbar class="sliding-navbar">
+        <ul class="navbar--items" id="hamburger-menuitem">
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-profile"></i>Profile</a></li>
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-matching-criteria"></i>Matching criteria</a></li>
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-account-settings"></i>Account settings</a></li>
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-contact"></i>Contact us</a></li>
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-success-stories"></i>Success stories</a></li>
+            <li class="navbar--item"><a href="#" class="navbar--link"><i class="icon-logout"></i>Logout</a></li>
+        </ul>
+        <ul class="notification--items" id="notification-menuitem">
+            <li class="notification--item">
+                <div class="info">
+                    <div class="img"><img src="images/img-user.jpg" alt="" /></div>
+                    <div class="desc">Wafer toffee candy lemon drops donut. Cookie bonbon jelly-o biscuit brownie toffee. Bear claw sugar plum tiramisu sugar plum liquorice.<br>
+                        <a href="#" class="font-weight-bold">Click here</a>
+                    </div>
+                    <div class="dot-menu dropdown custom-dropdown-select align-self-start">
+                        <span class="icon dropdown-toggle" data-toggle="dropdown"><i class="icon-dot"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" role="menuitem" class="select-item">Mark as read</a></li>
+                            <li><a href="#" role="menuitem" class="select-item">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="notification--item">
+                <div class="info">
+                    <div class="img"><img src="images/logo.png" alt="" /></div>
+                    <div class="desc">Wafer toffee candy lemon drops donut. Cookie bonbon jelly-o biscuit brownie toffee. Bear claw sugar plum tiramisu sugar plum liquorice.<br>
+                        <a href="#" class="font-weight-bold">Click here</a>
+                    </div>
+                    <div class="dot-menu dropdown custom-dropdown-select align-self-start">
+                        <span class="icon dropdown-toggle" data-toggle="dropdown"><i class="icon-dot"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" role="menuitem" class="select-item">Mark as read</a></li>
+                            <li><a href="#" role="menuitem" class="select-item">Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </navbar>
+    <div class="mask"></div>
+
+<main class="main-container" role="main" class="flex-shrink-0">
+    <div class="alert alert-primary alert-dismissible notification-alert mb-0" role="alert">
+        Do you prefer to browse the list of all the jobs live?  View all jobs’ list
+        <a href="#" class="close" data-dismiss="alert"><span>&times;</span></a>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="filter-job row">
+            <div class="filter-sidebar border-right col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2 d-none d-md-block">
+                <div class="title-welcome">Welcome back, Elisa</div>
+                <div class="filter-box">
+                    <div class="filter-body">
+                        <div class="d-flex justify-content-center align-items-center a mb-2">
+                            <div class="flex-grow-1"><strong class="text-theme">Daily alerts</strong></div>
+                            <div class="pl-2">
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="daily-alert">
+                                    <label class="custom-control-label" for="daily-alert"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="flex-grow-1"><strong class="text-theme">Weekly newsletter</strong></div>
+                            <div class="pl-2">
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="weekly-newsletter">
+                                    <label class="custom-control-label" for="weekly-newsletter"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <div class="filter-body">
+                        <div class="edit-input mb-0"><span class="desc">Employers can view an anonymized version of your profile</span><span class="icon"><i class="icon-pencil"></i></span></div>
+                    </div>
+                </div>
+
+                <div class="profile-progress">
+                    <div class="profile-progress-title">80% of profile and preferences updated</div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="filter-overflow-scroll scrollbar">
+                    <div class="filter-box border-bottom-0 mb-0">
+                        <div class="filter-body">
+                            <div class="edit-input mt-3 mb-0"><span class="desc d-block mb-0"><strong>Product manager at Movemeon</strong><br>5 years of expereince<br>London, UK</span><span class="icon mt-4"><i class="icon-pencil"></i></span></div>
+                            <small class="small-info">Last profile update: 20th April 2020</small>
+                            <div class="edit-input mt-3 mb-0">Preferences<span class="icon m-0"><i class="icon-pencil"></i></span></div>
+                            <small class="small-info">Last preferences update: 20th April 2020</small>
+                            <div class="font-16 mb-2">Actively looking for a job</div>
+                        </div>
+                    </div>
+                    <div class="filter-box border-bottom-0">
+                        <div class="filter-title">
+                            <h4>Job type</h4>
+                        </div>
+                        <div class="filter-body">
+                            <a href="#" class="filter-link">Permanent</a>
+                        </div>
+                    </div>
+                    <div class="filter-box border-bottom-0">
+                        <div class="filter-title">
+                            <h4>Location</h4>
+                        </div>
+                        <div class="filter-body">
+                        <a href="#" class="filter-link">London, UK - I have permanent working eligibility</a>
+                        <a href="#" class="filter-link">France - I have sponsorship but will need it transfered</a>
+                        </div>
+                    </div>
+                    <div class="filter-box border-bottom-0 pb-0">
+                        <div class="filter-title">
+                            <h4>Total compensation</h4>
+                        </div>
+                        <div class="filter-body">
+                        <a href="#" class="filter-link">Minimum: £30K</a>
+                        <a href="#" class="filter-link">Maximum: £50K</a>
+                        </div>
+                    </div>
+                    <div class="filter-box border-bottom-0">
+                        <div class="filter-body">
+                            <div class="flex-span justify-content-center mb-0"><a href="#" class="btn-underline">View all</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="filter-data-block col-12 col-sm-12 col-md-8 col-lg-9 col-xl-10">
+                <div class="main-description-block">
+
+                    <!-- ONLY MOBILE START -->
+                    <div class="filter-side-block d-md-none">
+                        <h1 class="title user-name">Welcome back, Elisa</h1>
+                        <div class="filter-box border-bottom-0 mb-0">
+
+                            <div class="profile-progress">
+                                <div class="profile-progress-title">80% of profile and preferences updated</div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="profile-progress-info">Last preferences update: 20th April 2020</div>
+                            </div>
+
+                            <div class="action text-center">
+                                <a href="#" class="font-weight-bold text-decoration">Update</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ONLY MOBILE END -->
+
+                    <div class="job-slider-block bg-light">
+                        <h1 class="title text-bodyfontcolor"><i class="fa fa-star"></i>Invited to interview from employers</h1>
+                        <div class="slider invited-slider">
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">12 hours ago <span class="wish-list __wishlist-toggle liked"><span class="wish-list __wishlist-toggle liked"><i class="fa fa-heart"></i></span></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">12 hours ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">12 hours ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">12 hours ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-slider-block">
+                        <h1 class="title text-secondary mb-0"><i class="fa fa-heart"></i>Saved jobs</h1>
+                        <span class="sub-title">Don't forget to apply to your saved jobs before they expire</span>
+                        <div class="slider saved-job-slider">
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle liked"><i class="fa fa-heart"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle liked"><i class="fa fa-heart"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle liked"><i class="fa fa-heart"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box view-all-link">
+                                <a href="#" class="btn-underline">View all saved jobs (3)</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn-underline">View all saved jobs (3)</a>
+                        </div>
+                    </div>
+
+                    <div class="job-slider-block mt-0">
+                        <h1 class="title text-secondary mb-0"><i class="fa fa-search"></i>Invited to apply by the movemeon team <i class="icon-info" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></h1>
+                        <span class="sub-title">Jobs manually selected for you by our team </span>
+                        <div class="slider saved-job-slider">
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme">3 days ago <span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box view-all-link">
+                                <a href="#" class="btn-underline">View all invited jobs (20)</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn-underline">View all invited jobs (20)</a>
+                        </div>
+                    </div>
+
+                    <div class="job-slider-block mt-0">
+                        <h1 class="title text-secondary mb-0"><i class="icon-square-check"></i>100% match  <i class="icon-info" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></h1>
+                        <span class="sub-title">Jobs that match your profile and preferences</span>
+                        <div class="slider saved-job-slider">
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box view-all-link">
+                                <a href="#" class="btn-underline">View all matches (20)</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn-underline">View all matches (20)</a>
+                        </div>
+                    </div>
+
+                    <div class="job-slider-block mt-0">
+                        <h1 class="title text-secondary mb-0"><span class="icon-label">New</span>New jobs you haven’t seen yet</h1>
+                        <span class="sub-title">Don’t miss any new opportunity</span>
+                        <div class="slider saved-job-slider">
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box">
+                                <div class="action">
+                                    <span class="font-weight-bold font-14">100% Match</span>
+                                    <span class="font-weight-bold text-theme"><span class="wish-list __wishlist-toggle"><i class="fa fa-heart-o"></i></span></span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="box-img">
+                                        <img src="images/img-75x55.jpg" alt="" />
+                                    </div>
+                                    <div class="box-desc">
+                                        <a href="#" class="box-title">Movemeon<strong>Strategy Manager</strong></a>
+                                        <div class="box-caption">Sugar plum fruitcake macaroon sweet roll...</div>                                        
+                                    </div>
+                                </div>
+                                <span class="location">London, UK | Sponsorship provided<br>30-40K | Manager</span>
+                            </div>
+                            <div class="job-info-box view-all-link">
+                                <a href="#" class="btn-underline">View all new jobs (100)</a>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn-underline">View all new jobs (100)</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="live-application-block">
+        <div class="container-fluid">
+            <h1 class="text-secondary">Live applications <span class="font-weight-normal">- 4  live applications recenly updated</span></h1>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="live-app-box">
+                        <div class="app-img-name">
+                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                        </div>
+                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                        <div class="status">In screening</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="live-app-box">
+                        <div class="app-img-name">
+                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                        </div>
+                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                        <div class="status">Interviewing</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="live-app-box">
+                        <div class="app-img-name">
+                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                        </div>
+                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                        <div class="status">In screening</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="live-app-box">
+                        <div class="app-img-name">
+                            <div class="img"><img src="images/logo.png" alt="" /></div>
+                            <a class="title" href="#">Strategy Manager at Movemeon</a>
+                        </div>
+                        <div class="applied-date"><i class="icon-calender"></i><span>Applied- 23rd April 2020<br>Expected update - 7th May 2020</span></div>
+                        <div class="status">Final round</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <a href="#" class="btn-underline">View all live applications (10)</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="main-footer mt-auto">
+    <div class="container-fluid">
+        <div class="footer-left"><a href="mailto:info@movemeon.com"><strong class="icon-fa"><i class="fa fa-envelope" aria-hidden="true"></i> info@movemeon.com</strong></a></div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-6">
+                <div class="footer-note">Use of this website constitutes acceptance of the movemeon <a href="#">Terms of use</a>, <a href="#">Commercial terms for employers</a> and <a href="#">Privacy policy</a></div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="footer-right"><strong>2020 MoveMeOn.com. All rights reserved.</strong></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
