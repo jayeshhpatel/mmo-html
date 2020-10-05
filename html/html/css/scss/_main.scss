@@ -9,7 +9,7 @@ body {
         font-size: $m_bodyfontsize;
     }
     @media (max-width: 575px){
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -739,7 +739,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     text-decoration: underline !important;
     cursor: pointer;
     .fa {
-        color:$bodyfontcolor;
+        color:$bodyfontcolor; @include transition(0.3s, ease-in-out);
     }
     &:hover { 
         color: $primaryHover; 
@@ -748,6 +748,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         -webkit-box-shadow:  none !important;
         box-shadow:  none !important;
         cursor: pointer;
+        .fa {  
+            transform: scale(1.1);
+        }
     }
 
     &.focus, &:focus {
@@ -764,7 +767,12 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         cursor: pointer;
     }
 }
-
+.linkedin-link {  
+    .fa { @include transition(0.3s, ease-in-out); }
+    &:hover {
+        .fa { transform: scale(1.1); }
+    }
+}
 .custom-switch {
     &.switch-primary {
         .custom-control-input:checked ~ .custom-control-label::before { background: $white; }
@@ -1155,7 +1163,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .main-container {
     padding-top: 54px;
     flex: 1;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     .page-content {
         padding: 50px 0;
         @media (max-width: 767px){
@@ -1277,12 +1285,16 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             width: 100%;
         }
     }
+    ._showhide {
+        h2 { margin-bottom: 2rem; }
+    } 
 }
 
 .form-small-block {
     max-width: 400px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    
 }
 
 /*main-login-email*/
@@ -1330,6 +1342,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             img {
                 @include border-radius(50%);
                 height: 45px; width: 45px;
+            }
+            .media-body {
+                color: #7e7e7e;
             }
         }
     }
@@ -1381,7 +1396,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .nav-theme {
-    .nav-link { border: 1px solid #C4C4C4; background: #F5F5F5; max-width: 100px; min-height: 100px; text-align: center; border-radius: 0; margin: 0 5px; text-decoration: none; color: #4E4E4E; padding: 20px 10px 5px 10px; font-size: 17px;  position: relative;
+    .nav-link { border: 1px solid #C4C4C4; background: #F5F5F5; max-width: 100px; min-height: 100px; text-align: center; border-radius: 0; margin: 0 5px; text-decoration: none; color: #7E7E7E; padding: 20px 10px 5px 10px; font-size: 17px;  position: relative;
     
         &.active, &.done { border: 1px solid $primary; background: $primary; color: #ffffff; font-weight: 600; 
             small { font-weight: 600;  }
@@ -2574,5 +2589,6 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 @media (max-width: 575px) {
     .form-group.custom-checkbox { font-size: 13px; }
+    .main-login-register .box-dont-account { margin-top: 15px; }
     .upload-file { font-size: 13px; }
 }
