@@ -139,10 +139,16 @@ $(document).ready(function() {
         });
     }
 
+    if ($(".waves-effect").length) { 
+        $('.waves-effect').rippleria();
+        $('.waves-effect.waves-dark').rippleria("changeColor", "rgba(0, 0, 0, 0.03)");
+        $('.waves-effect.waves-light').rippleria("changeColor", "rgba(255,255,255,.2)");
+    }
+
    /* CSS3 ripple Animation effect in Button */
-    if ($(".btn, .btn-ripple").length) {
+    if ($(".btn-ripple").length) {
         //$(".btn-ripple, .btn, .custom-switch, .nav-theme .nav-link, .__wishlist-toggle, .filter-title").click(function (e) {
-        $(".btn-ripple, .btn, .custom-checkbox, .custom-radio, .button-check, .custom-switch,  .nav-theme .nav-link, .__wishlist-toggle, .filter-title").click(function (e) {
+        $(".btn-ripple, .nav-theme .nav-link, .__wishlist-toggle, .filter-title").click(function (e) {
         //$( "body" ).delegate( ".btn-ripple, .btn, .custom-checkbox", "click", function(e) {
         // Remove any old one
         $(".ripple").remove();
@@ -429,4 +435,16 @@ $(document).ready(function() {
         })
     }   
       
+});
+/* Progress Bar */
+$(function(){
+    var percent = $('.bar .percent'),
+        imgs = $(window),
+        imgPercent = (100 / imgs.length),
+        curPercent = 0;
+        $(window).on('load', function () {
+            curPercent += imgPercent;
+            percent.width(Math.round(curPercent) + '%');
+            console.log(Math.round(curPercent) + '%');
+        });
 });
