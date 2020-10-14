@@ -1355,8 +1355,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 
 }
 
-.sidebar-list-unstyled {
-    padding: 25px 0;
+.sidebar-list-unstyled { padding: 100px 0 25px;
     h2 {margin-bottom: 20px;}
     .list-unstyled {
         .media:not(:last-child) {margin-bottom: 30px;}
