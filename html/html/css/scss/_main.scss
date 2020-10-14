@@ -258,7 +258,7 @@ select:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-[data-toggle="tooltip"] {cursor: help;}
+[data-toggle="tooltip"] {cursor: pointer;}
 
 
 /*  Ripple - effect */
@@ -502,22 +502,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     //     }
     // }
 
-    &.custom-checkbox {
-        .custom-control-label { padding-left: 30px; 
-            &::before, &::after { content: ''; left: 0; position: absolute; -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; z-index: 1; }
-            &::after { height: 20px; width: 20px; background-color: transparent; border: 2px solid #c4c4c4; top: 0px;  z-index: 0; }
-            &::before { width: 0; height: 0; border: 3px solid transparent; left: 6px; top: 10px; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; background: transparent; }
-        }        
-        .custom-control-input {
-            &:checked ~ .custom-control-label {
-                &::after { top: 0; width: 20px; height: 20px; border: 2px solid $primary; background-color: $primary; z-index: 0; background-image: none; }
-                &::before { top: 2px; left: 1px; width: 8px; height: 13px; border-top: 2px solid transparent; border-left: 2px solid transparent; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; box-shadow: none; @include border-radius(0px); }
-            }
-            &:not(:disabled):active ~ .custom-control-label::before { background-color: transparent; }
-            &:focus:not(:checked) ~ .custom-control-label::before { border-color: transparent; box-shadow: none; }
-            &:not(:disabled):active ~ .custom-control-label::before { border-color: transparent; }
-        }        
-    }
+    
 
     select {  
         background-color: white;
@@ -562,7 +547,22 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         & > .icon { position: absolute; left: 15px; width: 20px; top: 8px; z-index: 4; margin-top: -1px; }
     }
 }
-
+.custom-checkbox {
+    .custom-control-label { padding-left: 30px; 
+        &::before, &::after { content: ''; left: 0; position: absolute; -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; z-index: 1; }
+        &::after { height: 20px; width: 20px; background-color: transparent; border: 2px solid #c4c4c4; top: 0px;  z-index: 0; }
+        &::before { width: 0; height: 0; border: 3px solid transparent; left: 6px; top: 10px; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; background: transparent; }
+    }        
+    .custom-control-input {
+        &:checked ~ .custom-control-label {
+            &::after { top: 0; width: 20px; height: 20px; border: 2px solid $primary; background-color: $primary; z-index: 0; background-image: none; }
+            &::before { top: 2px; left: 1px; width: 8px; height: 13px; border-top: 2px solid transparent; border-left: 2px solid transparent; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; box-shadow: none; @include border-radius(0px); }
+        }
+        &:not(:disabled):active ~ .custom-control-label::before { background-color: transparent; }
+        &:focus:not(:checked) ~ .custom-control-label::before { border-color: transparent; box-shadow: none; }
+        &:not(:disabled):active ~ .custom-control-label::before { border-color: transparent; }
+    }        
+}
 
 
 .form-group-label { position: relative; 
@@ -591,7 +591,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .custom-dropdown-select {
     .custom-select-label {
         text-align: left;
-        background-color: #ffffff;
+        background-color: transparent;
             /* inline SVG */
         background-image: url("../images/icons/select-down.svg");
         background-position: right 0px center;
@@ -1533,16 +1533,16 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             .flex-span { @include flexbox(); @include align-items(center); @include justify-content(space-between); margin-bottom: 8px; line-height: 1.3; }   
                
             
-            .custom-control:not(.custom-switch) { /* margin-bottom: 5px; */ padding-left: 1.8rem;
-                .custom-control-label {
-                    &::after {
-                        left: -1.8rem;
-                    }
-                    &::before {
-                        left: -1.8rem;
-                    }
-                }
-            }
+            // .custom-control:not(.custom-switch) { /* margin-bottom: 5px; */ padding-left: 1.8rem;
+            //     .custom-control-label {
+            //         &::after {
+            //             left: -1.8rem;
+            //         }
+            //         &::before {
+            //             left: -1.8rem;
+            //         }
+            //     }
+            // }
 
             .custom-switch.custom-switch-md .custom-control-label {
                 padding-left: 0.5rem;
@@ -1603,52 +1603,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 
     /*custom-checkbox*/
     .custom-checkbox {
-        padding-left: 32px;
-        font-size: 14px;
-        font-weight: 400;
-        color: $bodyfontcolor;
-        .custom-control-label {
-            line-height: initial !important;
-            &::before {
-                top: 0;
-                left: -28px;
-                border: 1px solid #C4C4C4;
-                border-radius: 0;
-                width: 20px;
-                height: 20px;
-            }
-            &::after {
-                top: 2px !important;
-                left: -27px !important;
-                width: 16px;
-                height: 16px;
-            }
-
-            a {
-                color: $primary;
-                text-decoration: underline;
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-        
-        .custom-control-input {
-            &:checked ~ .custom-control-label::before {
-                border-color: #C4C4C4;
-                background-color: #fff;
-            }
-            &:checked ~ .custom-control-label::after {
-                background-color: $primary;
-            }
-            &:focus ~ .custom-control-label::before {
-                box-shadow: none !important;
-            }
-
-            &:focus:not(:checked) ~ .custom-control-label::before {
-                border-color: $primary;
-            }
-        }
+       padding-left: 0;
     }
 }
 
