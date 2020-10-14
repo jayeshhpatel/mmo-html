@@ -591,10 +591,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 .custom-dropdown-select {
     .custom-select-label {
         text-align: left;
-        background-color: white;
+        background-color: #ffffff;
             /* inline SVG */
         background-image: url("../images/icons/select-down.svg");
-        background-position: right 10px center;
+        background-position: right 0px center;
         background-repeat: no-repeat;
         background-size: auto 50%;
         padding: 5px 0;
@@ -605,7 +605,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         -webkit-appearance: none;
         appearance: none;
         border: none;
-        border-bottom: 1px solid #C4C4C4;
+        border-bottom: 1px solid #C4C4C4 !important;
         @include border-radius(0px);
         &::-ms-expand { display: none };
 
@@ -1484,7 +1484,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .home-match-tab { margin-top: 10px; margin-bottom: 15px; 
-    .nav-item {
+    .nav-item { width: 33.33%;
         &:not(:last-child) {
             border-right:1px solid #C4C4C4;
         }
@@ -1715,7 +1715,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 
-.mobile-filter-nav { position: fixed; top: 0px; left: -100%; height: 100vh; width: 100%; background: #F5F5F5;  transition: left 0.3s ease-in-out; z-index: 1036; border: 1px solid #C4C4C4; 
+.mobile-filter-nav { position: fixed; top: 0px; left: -100%; height: 100vh; width: 100%; background: #F5F5F5;  transition: left 0.3s ease-in-out; z-index: 1036; border: 0px solid #C4C4C4; 
     nav { position: relative; height: 100%; 
         .title { padding: 12px 20px; @include flexbox(); @include align-items(center); @include justify-content(space-between); border-bottom: 1px solid #C4C4C4;
             .name { font-weight: bold; font-size: 16px; }
