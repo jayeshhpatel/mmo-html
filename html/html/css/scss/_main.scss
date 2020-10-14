@@ -743,42 +743,42 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .fa { transform: scale(1.1); }
     }
 }
+.pulse-effect {  
+    position: relative;    
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.15);
+    border-radius: 50%;
+    -webkit-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+
+}
+.pulse-effect:hover 
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
 .custom-switch {
     .custom-control-label {
-        &::after { content: "";
-            position: absolute;
-            top: 1px;
-            right: 16px;
-            left: calc(-2.25rem + 0px);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            background-color: #F1F1F1;
-            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-            transition: background-color 0.2s, transform 0.2s; }
-        &::before { content: "";
-            float: right;
-            display: inline-block;            
-            border-radius: 7px;
-            width: 36px;
-            height: 14px;
-            background-color: #c4c4c4;
-            vertical-align: top;
-            transition: background-color 0.2s, opacity 0.2s; border-color: transparent; }
-            
+        &::after { content: ""; position: absolute; top: 1px; right: 16px; left: calc(-2.25rem + 0px); border-radius: 50%; width: 20px; height: 20px; background-color: #F1F1F1; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); transition: background-color 0.4s, transform 0.4s; }
+        &::before { content: ""; float: right; display: inline-block; border-radius: 7px; width: 36px; height: 14px; background-color: #c4c4c4; vertical-align: top; transition: background-color 0.4s, opacity 0.4s; border-color: transparent; }            
+    }
+    .custom-control-input {
+        &:checked {
+            & ~ .custom-control-label::after { background-color: $primary; transform: translateX(16px); -webkit-transform: translateX(16px); }
+            & ~ .custom-control-label::before { border-color:#97d9e0; background-color: #97d9e0; }
+            &:active ~ .custom-control-label::after { @include box-shadow(0px 0px 2px 12px rgba(38,166,154,0.1)); @include transition(0.2s, ease-in-out); }
+            &:focus ~ .custom-control-label::after { @include box-shadow(0px 0px 2px 12px rgba(38,166,154,0.1)); @include transition(0.2s, ease-in-out); }
         }
-        .custom-control-input:checked ~ .custom-control-label::after { background-color: red;
-            transform: translateX(16px); }
-        .custom-control-input:checked ~ .custom-control-label::before { 
-            border-color:#97d9e0;
-            background-color: #97d9e0;
-        }
-        .custom-control-input:checked ~ .custom-control-label::after { 
-            background-color: $primary;
-            -webkit-transform: translateX(16px);
-            transform: translateX(16px);
-         }
-         .custom-control-input:focus ~ .custom-control-label::before { box-shadow: none; border-color: transparent; }
+        &:active ~ .custom-control-label::after { @include transition(0.2s, ease-in-out); @include box-shadow(0px 0px 2px 12px rgba(0,0,0,0.1)); }
+        &:focus ~ .custom-control-label::after { @include transition(0.2s, ease-in-out); @include box-shadow(0px 0px 2px 12px rgba(0,0,0,0.1)); }
+        &:focus ~ .custom-control-label::before { box-shadow: none; border-color: transparent; }
+        &:not(:disabled):active ~ .custom-control-label::before { background-color: #c4c4c4; border-color: #c4c4c4; }
+    }
 //     &.switch-primary {
 //         .custom-control-input:checked ~ .custom-control-label::before { background: $white; }
 //         .custom-control-input:checked ~ .custom-control-label::after { background: $primary; }
