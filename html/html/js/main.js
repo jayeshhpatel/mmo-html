@@ -146,9 +146,9 @@ $(document).ready(function() {
     }
 
    /* CSS3 ripple Animation effect in Button */
-    if ($(".btn-ripple").length) {
+    if ($("body").length) {
         //$(".btn-ripple, .btn, .custom-switch, .nav-theme .nav-link, .__wishlist-toggle, .filter-title").click(function (e) {
-        $(".btn-ripple, .nav-theme .nav-link, .__wishlist-toggle, .filter-title").click(function (e) {
+        $(".btn-ripple, .nav-theme .nav-link, .__wishlist-toggle, .filter-title, .slick-prev").click(function (e) {
         //$( "body" ).delegate( ".btn-ripple, .btn, .custom-checkbox", "click", function(e) {
         // Remove any old one
         $(".ripple").remove();

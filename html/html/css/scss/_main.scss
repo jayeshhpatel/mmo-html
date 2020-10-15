@@ -263,33 +263,18 @@ select:-webkit-autofill:active  {
 
 /*  Ripple - effect */
 .btn-ripple {position: relative;}
-.ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); position: absolute; 
-@include opacity(1);
--ms-transform: scale(0);
--moz-transform: scale(0);
--o-transform: scale(0);
--webkit-transform: scale(0);
-transform: scale(0);
-}
+.ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); position: absolute; @include opacity(1); -ms-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); }
 .custom-checkbox,
 .custom-radio,
 .button-check,
 .custom-switch,
-.filter-title {
-    position: relative;
-    .ripple {
-        background: rgba(0, 0, 0, 0.05);
-    }
+.filter-title { position: relative;
+    .ripple { background: rgba(0, 0, 0, 0.05); }
 }
-.rippleEffect {animation: rippleDrop .2s linear;}
-@keyframes rippleDrop {100% {
--ms-transform: scale(1.5);
--moz-transform: scale(1.5);
--o-transform: scale(1.5);
--webkit-transform: scale(1.5);
-transform: scale(1.5);
-@include opacity(0); 
-}}
+.rippleEffect { -webkit-animation: rippleDrop .2s linear; -moz-animation: rippleDrop .2s linear; -ms-animation: rippleDrop .2s linear; animation: rippleDrop .2s linear; }
+@keyframes rippleDrop {
+    100% { -ms-transform: scale(1.5); -moz-transform: scale(1.5); -o-transform: scale(1.5); -webkit-transform: scale(1.5); transform: scale(1.5); @include opacity(0); }
+}
 
 
 h1, .h1 {font-family: $hfont; font-weight: bold; font-size: 18px; color: #7e7e7e;}
@@ -547,17 +532,20 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         & > .icon { position: absolute; left: 15px; width: 20px; top: 8px; z-index: 4; margin-top: -1px; }
     }
 }
+.custom-checkbox, .custom-radio { padding-left: 0; }
 .custom-checkbox {
-    .custom-control-label { padding-left: 30px; 
+    .custom-control-label { padding-left: 30px; cursor: pointer; line-height: 1.5;
         &::before, &::after { content: ''; left: 0; position: absolute; -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s; z-index: 1; }
-        &::after { height: 20px; width: 20px; background-color: transparent; border: 2px solid #c4c4c4; top: 0px;  z-index: 0; }
+        &::after { height: 20px; width: 20px; background-color: transparent; border: 2px solid #c4c4c4; top: 1px;  z-index: 0; }
         &::before { width: 0; height: 0; border: 3px solid transparent; left: 6px; top: 10px; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; background: transparent; }
     }        
     .custom-control-input {
         &:checked ~ .custom-control-label {
-            &::after { top: 0; width: 20px; height: 20px; border: 2px solid $primary; background-color: $primary; z-index: 0; background-image: none; }
-            &::before { top: 2px; left: 1px; width: 8px; height: 13px; border-top: 2px solid transparent; border-left: 2px solid transparent; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; box-shadow: none; @include border-radius(0px); }
+            &::after { top: 1px; width: 20px; height: 20px; border: 2px solid $primary; background-color: $primary; z-index: 0; background-image: none; }
+            &::before { top: 4px; left: 2px; width: 8px; height: 12px; border-top: 2px solid transparent; border-left: 2px solid transparent; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -webkit-transform: rotateZ(37deg); transform: rotateZ(37deg); -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; box-shadow: none; @include border-radius(0px); }
         }
+        &:disabled ~ .custom-control-label, &[disabled] ~ .custom-control-label { cursor: default; }
+        &:disabled ~ .custom-control-label::before, &[disabled] ~ .custom-control-label::before { background-color: transparent; }
         &:not(:disabled):active ~ .custom-control-label::before { background-color: transparent; }
         &:focus:not(:checked) ~ .custom-control-label::before { border-color: transparent; box-shadow: none; }
         &:not(:disabled):active ~ .custom-control-label::before { border-color: transparent; }
@@ -619,7 +607,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         // &:hover { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
     }
 
-    .dropdown-menu { background-color: #fff; margin: 0; display: block; min-width: 100px; width: 100%; overflow-y: auto; opacity: 0; visibility: hidden; position: absolute; left: 0; top: 0; z-index: 9999; padding: 0; max-height: 350px; transform: scaleX(0) scaleY(0) !important; -webkit-transform-origin: 0 0; transform-origin: 0 0; @include transition(0.3s, ease-in-out); border: none; @include border-radius(0); -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    .dropdown-menu { background-color: #fff; margin: 0; display: block; min-width: 170px; width: 100%; overflow-y: auto; opacity: 0; visibility: hidden; position: absolute; left: 0; top: 0; z-index: 9999; padding: 0; max-height: 350px; transform: scaleX(0) scaleY(0) !important; -webkit-transform-origin: 0 0; transform-origin: 0 0; @include transition(0.3s, ease-in-out); border: none; @include border-radius(0); -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
         li { @include border-radius(0); }
         .select-item { font-size: 14px; font-weight: 500; border: none; background: transparent; width: 100%; display: block; text-align: left; @include transition(.3s, ease-in-out); color: $bodyfontcolor; padding: 10px 15px; border: 0px !important; outline: none !important; @include border-radius(0px); text-decoration: none !important;           
             &:hover { color: $primary; background: #f1f1f1; text-decoration: none !important; }
@@ -628,8 +616,8 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         &::-webkit-scrollbar { width:6px;background-color:#F5F5F5; }
         &::-webkit-scrollbar-thumb { background-color:rgba(0,0,0,0.3); }
         &::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);background-color:transparent; }
-      }
-      &.show > .dropdown-menu { opacity: 1; visibility: visible; left: 0px; top: 0px; transform-origin: 0px 0px; opacity: 1; transform: scaleX(1) scaleY(1) !important; }
+    }
+    &.show > .dropdown-menu { opacity: 1; visibility: visible; left: 0px; top: 0px; transform-origin: 0px 0px; opacity: 1; transform: scaleX(1) scaleY(1) !important; }
 
     &.disabled {
         .custom-select-label { pointer-events: none; background-color: #f5f5f5; }
@@ -638,7 +626,9 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .custom-select-label { border-color: #EC656A !important }
         .error-text { color: #EC656A; font-size: 12px; display: block; text-align: left !important; }
     }
-
+    &.dropright-menu {
+        .dropdown-menu { left: auto !important; right: 0 !important; }
+    }
 }
 
 .tag { position: relative; display: inline-block; margin: 0 5px 10px;
@@ -687,15 +677,15 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .custom-radio {
-    .custom-control-label {
-        &::after, &::before { width: 20px; height: 20px; top: 2px; }        
+    .custom-control-label { padding-left: 30px; cursor: pointer; line-height: 1.5;
+        &::after, &::before { width: 20px; height: 20px; top: 1px; left: 0; }        
     }
     .custom-control-input:not(:disabled):active ~ .custom-control-label::before { background-color: $white; }
     .custom-control-label::after { border: 2px solid #c4c4c4; @include border-radius(50%); }
     .custom-control-label::before { transform: scale(0); @include transition(0.3s, ease-in-out); }
     .custom-control-input:checked ~ .custom-control-label::before { transform: scale(1); @include transition(0.3s, ease-in-out); }
     .custom-control-input:checked ~ .custom-control-label::after { background-image: none; border-color: #32B6C4; }
-    .custom-control-input:focus ~ .custom-control-label::before { box-shadow: none; border-color: #32B6C4; }
+    .custom-control-input:focus ~ .custom-control-label::before { box-shadow: none; border-color: #c4c4c4; }
     .custom-control-input:disabled ~ .custom-control-label::before, 
     .custom-control-input[disabled] ~ .custom-control-label::before { background-color: #f5f5f5; border-color: #f5f5f5; }
 }
@@ -743,39 +733,26 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         .fa { transform: scale(1.1); }
     }
 }
-.pulse-effect {  
-    position: relative;    
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.15);
-    border-radius: 50%;
-    -webkit-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
-    -moz-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
-    -ms-animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
-    animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
-
-}
-.pulse-effect:hover 
-{
-  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
-}
+.pulse-effect { position: relative; @include box-shadow(0 0 0 0 rgba(0,0,0,0.15)); border-radius: 50%; -webkit-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1); -moz-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1); -ms-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1); animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1); }
+.pulse-effect:hover { -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none; }
 
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);}}
 .custom-switch {
-    .custom-control-label {
-        &::after { content: ""; position: absolute; top: 1px; right: 16px; left: calc(-2.25rem + 0px); border-radius: 50%; width: 20px; height: 20px; background-color: #F1F1F1; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); transition: background-color 0.4s, transform 0.4s; }
-        &::before { content: ""; float: right; display: inline-block; border-radius: 7px; width: 36px; height: 14px; background-color: #c4c4c4; vertical-align: top; transition: background-color 0.4s, opacity 0.4s; border-color: transparent; }            
+    .custom-control-label { cursor: pointer;
+        &::after { content: ""; position: absolute; top: 1px; right: 16px; left: calc(-2.25rem + 0px); border-radius: 50%; width: 20px; height: 20px; background-color: #F1F1F1; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); transition: background-color 0.3s, transform 0.3s; }
+        &::before { content: ""; float: right; display: inline-block; border-radius: 7px; width: 36px; height: 14px; background-color: #c4c4c4; vertical-align: top; transition: background-color 0.3s, opacity 0.3s; border-color: transparent; }            
     }
     .custom-control-input {
         &:checked {
             & ~ .custom-control-label::after { background-color: $primary; transform: translateX(16px); -webkit-transform: translateX(16px); }
             & ~ .custom-control-label::before { border-color:#97d9e0; background-color: #97d9e0; }
-            &:active ~ .custom-control-label::after { @include box-shadow(0px 0px 2px 12px rgba(38,166,154,0.1)); @include transition(0.2s, ease-in-out); }
-            &:focus ~ .custom-control-label::after { @include box-shadow(0px 0px 2px 12px rgba(38,166,154,0.1)); @include transition(0.2s, ease-in-out); }
+            &:active ~ .custom-control-label::after { @include box-shadow(0px 0px 2px 12px rgba(38,166,154,0.1)); @include transition(0.1s, ease-in-out); }
+           
         }
-        &:active ~ .custom-control-label::after { @include transition(0.2s, ease-in-out); @include box-shadow(0px 0px 2px 12px rgba(0,0,0,0.1)); }
-        &:focus ~ .custom-control-label::after { @include transition(0.2s, ease-in-out); @include box-shadow(0px 0px 2px 12px rgba(0,0,0,0.1)); }
+        &:active ~ .custom-control-label::after { @include transition(0.1s, ease-in-out); @include box-shadow(0px 0px 2px 12px rgba(0,0,0,0.1)); }
         &:focus ~ .custom-control-label::before { box-shadow: none; border-color: transparent; }
         &:not(:disabled):active ~ .custom-control-label::before { background-color: #c4c4c4; border-color: #c4c4c4; }
     }
@@ -857,6 +834,13 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     }
 }
 
+.dot-menu { margin-left: 3px;
+    .icon-dot { width: 18px; height: 6px; display: inline-block; background: url('../images/icons/dot-menu.svg') center center no-repeat; background-size: contain; }
+    .icon { cursor: pointer; }
+    .dropdown-toggle::after { content: none; }
+    .dropdown-menu { left: auto !important; right: 0 !important; }
+}
+
 .button-check { 
     margin-bottom: 10px; margin-right: 10px; position: relative;
     input[type="checkbox"] { 
@@ -913,12 +897,12 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         background: $bodyfontcolor;
         transition: all 0ms 300ms;
         width: 30px;
-        height: 2px;
+        height: 3px;
 
         &:after,
         &:before {
             width: 30px;
-            height: 2px;
+            height: 3px;
         }
         &:before {
             content: "";
@@ -926,7 +910,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             left: 0;
             bottom: 8px;
             background: $bodyfontcolor;
-            transition: bottom 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         &:after {
             content: "";
@@ -934,15 +918,18 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             left: 0;
             top: 8px;
             background: $bodyfontcolor;
-            transition: top 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            
         }
-
+        &.menu-opened { background: transparent; transition: background 0s ease-in-out; }
         &.menu-opened:before {
-            bottom: 3px;
+            bottom: 5px; left: -8px;
+            transform: rotate(-45deg) translate(1px, 6px);
             transition: bottom 0.3s ease-in-out;
         }
         &.menu-opened:after {
-            top: 3px;
+            top: 1px; left: -8px;
+            transform: rotate(45deg) translate(2px, -5px);
             transition: top 0.3s ease-in-out;
         }
     }
@@ -993,12 +980,15 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
                 .img { @include border-radius(50%); border: 1px solid $primary; margin-right: 8px; min-width: 50px; min-height: 50px; display: inline-flex; @include align-items(center); 
                     img { width: 50px; height: 50px; background: $white; @include border-radius(50%); }
                 }
-                .desc { font-size: 14px; }
+                .desc { font-size: 14px; 
+                    .notification-link { font-weight: bold; display: inline-block; padding-top: 10px; }
+                }
             }
             .dot-menu { margin-left: 3px;
                 .icon-dot { width: 18px; height: 6px; display: inline-block; background: url('../images/icons/dot-menu.svg') center center no-repeat; background-size: contain; }
                 .icon { cursor: pointer; }
                 .dropdown-toggle::after { content: none; }
+                .dropdown-menu { left: auto !important; right: 0 !important; }
             }
             &:hover { background: #F5F5F5; }
         }
@@ -1107,6 +1097,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .right-menu { padding-top: 2px;
         .nav-icon { display: inline-flex; @include align-items(center); padding: 0 10px;
             a { display: inline-flex; position: relative;
+                &.notification-menu.active { @include box-shadow(0 0 0 0 rgba(50, 182, 196,0.15)); } 
                 &.notification-menu.active .icon-bell, 
                 &.notification-menu:hover .icon-bell { 
                     background: url('../images/icons/bell-active.svg') center center no-repeat;
@@ -1464,6 +1455,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 
 
 .alert-primary { text-align: center; color: #ffffff; background: $primary; border-color: $primary; @include border-radius(0px); font-weight: bold; padding: 15px; position: relative; padding-right: 50px;
+    &.notification-alert { position: fixed; top: 54px; width: 100%; z-index: 999; }
     .close { color: #ffffff; opacity: 1; top: 50%; 
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
@@ -1473,13 +1465,15 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
 }
 
 .icon-dropdown-select { position: relative; max-width: 130px; margin-left: 10px; width: 100%;
-    .custom-select-label { padding: 0px 12px 0px 30px; height: calc(1em + .75rem + 2px); font-size: 14px; line-height: 1;}
-    .icon { position: absolute; top: 50%; left: 12px; 
+    .custom-select-label { padding: 0px 12px 0px 20px; height: calc(1em + .75rem + 2px); font-size: 14px; line-height: 1; }
+    .icon { position: absolute; top: 50%; left: 0px; 
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
-        transform: translateY(-50%);}
+        transform: translateY(-50%);
+    }
+    .dropdown-menu { min-width: calc( 100% - 4px); max-width: calc( 100% - 4px); }
 }
 
 .home-match-tab { margin-top: 10px; margin-bottom: 15px; 
@@ -1568,9 +1562,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
         }
     }
     .filter-type-dropdown { max-width: 120px; 
-        .custom-select-label { 
+        .custom-select-label { border-bottom: none !important; font-size: 13px;
             &:hover { box-shadow: none !important; }
-         }
+        }
+        .dropdown-menu { li a { font-size: 13px; } }
     }
     .job-box { position: relative; border-bottom: 1px solid $MMO_lightgray; padding-bottom: 15px; margin-bottom: 15px; 
         h4 {
@@ -1892,7 +1887,10 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
     .sub-title { display: block; margin: 5px 0 15px 15px; }
 
     .job-info-box { background: #FFFFFF; border: 1px solid #C4C4C4; padding: 5px 10px; margin: 10px 15px; font-size: 14px; @include transition(0.3s, ease-in-out); -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);         
-        .action { padding-bottom: 2px; @include flexbox(); @include align-items(center); @include justify-content(space-between); }
+        .action { padding-bottom: 2px; @include flexbox(); @include align-items(center); @include justify-content(space-between); 
+            .match-job { font-weight: bold; font-size: 14px; }
+            .job-ago-time { color: #32b6c4; font-weight: bold; }
+        }
         .box-info { 
             .box-img { min-width: 75px; width: 75px; min-height: 55px; height: 55px; background: #F5F5F5; margin-right: 12px; margin-top: 5px; @include flexbox(); @include align-items(center); float: left; }
             .box-desc {
@@ -1904,7 +1902,7 @@ h6, .h6 {font-family: $hfont; font-weight: 400; font-size: 11px; color: $primary
             }
         }
         .location { padding-top: 8px; display: inline-block; font-size: 13px; }
-        &.view-all-link { background: transparent; @include flexbox(); @include align-items(center);  @include justify-content(center); min-height: 145px; border: none; 
+        &.view-all-link { background: transparent; @include flexbox(); @include align-items(center);  @include justify-content(center); min-height: 145px; border: none; @include box-shadow(none);
             &:hover {box-shadow: none !important;}
         }
 
